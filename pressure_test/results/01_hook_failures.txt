@@ -1,0 +1,22 @@
+=== Pressure test 1: hook failure modes ===
+bmg binary: bmg 0.1.0-dev
+
+(a) missing file
+  PASS  missing-file — passthrough (exit 0, no stdout)
+(b) zero-byte file
+  PASS  zero-byte — exit 0 (no panic)
+       (stdout shape: {"hookSpecificOutput":{"hookEventName":"PreToolUse","permissionDecision":"deny","additionalContext":"Gemini describe fai)
+(c) BMG_DISABLE=1 (bypass)
+  PASS  BMG_DISABLE=1 — passthrough (exit 0, no stdout)
+(d) BMG_HOOK_PROXY=1 (recursion guard)
+  PASS  BMG_HOOK_PROXY=1 — passthrough (exit 0, no stdout)
+(e) .txt file (non-image extension)
+  PASS  txt-extension — passthrough (exit 0, no stdout)
+(f) no API key (fail-open)
+  PASS  no-api-key — passthrough (exit 0, no stdout)
+(g) malformed stdin JSON
+  PASS  malformed-stdin — exit 0 (no panic)
+(h) empty stdin
+  PASS  empty-stdin — exit 0 (no panic)
+
+=== summary: 8 pass, 0 fail ===

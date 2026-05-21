@@ -1,0 +1,9 @@
+=== Pressure test 6: concurrent cache access ===
+
+(0) cleaned cache entry 6b3b4ded781b32a699b3c4d7e517200d5e15ee908c00defc670f48f4a8849023 (cold start)
+(1) firing 5 parallel `bmg describe` on the same image
+  5 / 5 parallel calls succeeded
+  PASS  all 5 parallel calls succeeded
+  PASS  all 5 output JSONs are valid (no truncated/corrupt writes)
+
+=== summary: 2 pass, 0 fail ===

@@ -1,0 +1,7 @@
+The error banner displays:
+
+**"Session expired"**
+
+with the message: **"Please sign in again to continue."**
+
+The banner suggests that the user's authentication session has timed out, and they need to **sign in again** to regain access to the dashboard. There's also an "×" button on the right side of the banner that allows the user to dismiss the notification.

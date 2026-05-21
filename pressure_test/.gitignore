@@ -1,0 +1,11 @@
+fixtures/zero.png
+fixtures/sample.txt
+fixtures/prompt_injection.png
+fixtures/fence_breakout.png
+fixtures/prewarm_target.png
+fixtures/synth_video.mp4
+fixtures/corpus/
+results/06.parallel.tmp/
+results/*.txt
+results/*.json
+results/*.err

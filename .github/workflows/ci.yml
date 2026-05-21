@@ -1,0 +1,48 @@
+name: ci
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  test:
+    name: go test + vet + fmt + build
+    strategy:
+      fail-fast: false
+      matrix:
+        # macOS catches Mac-specific path / FS quirks (UserCacheDir,
+        # case-insensitive volumes, file lock semantics). ubuntu is
+        # the developer's primary OS. Windows is intentionally
+        # excluded — bmg does not currently support Windows, and the
+        # hook command shape (`bmg.exe hook pre-read` from a JSON
+        # config field) needs an explicit Windows-aware design pass
+        # before we put it in front of users.
+        os: [ubuntu-latest, macos-latest]
+    runs-on: ${{ matrix.os }}
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-go@v5
+        with:
+          go-version: '1.26'
+          cache: true
+
+      - name: gofmt -l (any file needing formatting is a failure)
+        shell: bash
+        run: |
+          unformatted=$(gofmt -l .)
+          if [ -n "$unformatted" ]; then
+            echo "::error::gofmt found files needing formatting:"
+            echo "$unformatted"
+            exit 1
+          fi
+
+      - name: go vet
+        run: go vet ./...
+
+      - name: go test
+        run: go test -count=1 -race ./...
+
+      - name: go build (verify cmd/bmg compiles cleanly)
+        run: go build -o /tmp/bmg ./cmd/bmg

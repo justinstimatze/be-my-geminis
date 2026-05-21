@@ -1,0 +1,65 @@
+name: Feature request
+description: A new profile, a new option, an integration improvement, or a polish change.
+title: "[feature] "
+labels: ["enhancement"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Feature requests are most actionable when they describe the
+        problem you're hitting and the constraint that keeps the
+        existing tools from solving it. Save the proposed
+        implementation for the discussion — what matters first is
+        whether the use case is in scope.
+
+  - type: textarea
+    id: use_case
+    attributes:
+      label: What are you trying to do?
+      description: The problem in your words, ideally with a concrete example.
+      placeholder: |
+        I'm reading lots of architecture diagrams and want bmg to
+        emit them as Mermaid text directly, without having to ask
+        Claude a follow-up.
+    validations:
+      required: true
+
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Alternatives you tried
+      description: Other tools, workarounds, or approaches. Helps us judge whether bmg is the right place for the fix.
+      placeholder: |
+        - Asked Claude to convert bmg's diagram output to Mermaid in
+          a follow-up turn (works but adds a round-trip).
+        - Used `mermaid-cli` directly on screenshots (works for
+          rendered diagrams, fails on photos of whiteboards).
+    validations:
+      required: false
+
+  - type: dropdown
+    id: surface
+    attributes:
+      label: Which surface?
+      description: Where in bmg should this live?
+      options:
+        - "PreToolUse:Read hook (drive-by)"
+        - "MCP bmg_describe (deliberate)"
+        - "CLI bmg describe (manual)"
+        - "Profile (new or existing)"
+        - "Install / doctor / cache"
+        - "Documentation"
+        - "Not sure"
+    validations:
+      required: true
+
+  - type: textarea
+    id: scope
+    attributes:
+      label: Anything intentionally out of scope?
+      description: It often helps to say what you DON'T want, especially for profile requests.
+      placeholder: |
+        Out of scope: bmg deciding which profile to use automatically.
+        I want explicit profile selection per call.
+    validations:
+      required: false

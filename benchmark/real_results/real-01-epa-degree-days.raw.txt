@@ -1,0 +1,22 @@
+# Reading the EPA Heating and Cooling Degree Days Chart
+
+## The Two Series
+
+1. **Heating degree days** (blue line) — days colder than 65°F, indicating heating demand
+2. **Cooling degree days** (orange/red line) — days warmer than 65°F, indicating cooling demand
+
+## Y-Axis Range (Degree Days)
+
+- **Heating degree days:** roughly **3,800 to 5,300**, with most values clustering between ~4,300 and 4,900
+- **Cooling degree days:** roughly **1,000 to 1,600**, with most values clustering between ~1,100 and 1,400
+- The axis itself runs from **0 to 6,000 degree days**
+
+## X-Axis Period
+
+The chart covers **1895 through 2023**, an interval of about 129 years of annual values.
+
+## Visible Trends Over Recent Decades
+
+- **Heating degree days are declining.** From roughly the 1970s onward, the blue line drifts noticeably downward. Early-record values frequently reached ~4,800–5,000, while recent years (2010s–2023) often fall in the ~3,800–4,300 range — including the lowest points in the entire record.
+- **Cooling degree days are rising.** The orange line is relatively flat through most of the 20th century (~1,100–1,250) but trends upward starting around the 1990s, reaching ~1,400–1,600 in the most recent years — the highest values in the record.
+- **Together, these opposing trends are consistent with a warming climate** across the contiguous U.S.: less energy demand for heating, more for cooling. The two series remain far apart in absolute terms (heating still dominates nationally), but the gap between them has been narrowing over the past 30+ years.

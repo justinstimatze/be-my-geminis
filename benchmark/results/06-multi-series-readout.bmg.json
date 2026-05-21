@@ -1,0 +1,140 @@
+{
+  "elements": null,
+  "latency_ms": 10044,
+  "model": "gemini-2.5-pro",
+  "profile": "chart",
+  "prompt_tokens": 769,
+  "structured": {
+    "axes": [
+      {
+        "label": "value",
+        "orientation": "y",
+        "range_text": "20-100",
+        "unit": ""
+      },
+      {
+        "label": "timestamp (t)",
+        "orientation": "x",
+        "range_text": "0-60",
+        "unit": "t"
+      }
+    ],
+    "chart_type": "line",
+    "key_observations": [
+      "The 'memory_kb' series shows a consistent linear increase across the entire time range.",
+      "At timestamp x=42, the 'memory_kb' line has a y-value of approximately 78.",
+      "The 'cpu_pct' series displays a sawtooth pattern, repeatedly spiking to a value of ~80 and then dropping sharply.",
+      "The 'requests_qps' series is the most volatile metric besides 'cpu_pct', fluctuating mostly between 60 and 75.",
+      "The 'net_in_mbps' and 'net_out_mbps' series generally stay below a value of 50."
+    ],
+    "series": [
+      {
+        "color": "orange",
+        "name": "memory_kb",
+        "notable_values": [
+          {
+            "label": "start (x=0)",
+            "value": "50"
+          },
+          {
+            "label": "value at x=42",
+            "value": "~78"
+          },
+          {
+            "label": "end (x=60)",
+            "value": "~90"
+          }
+        ],
+        "trend": "rising"
+      },
+      {
+        "color": "blue",
+        "name": "cpu_pct",
+        "notable_values": [
+          {
+            "label": "start (x=0)",
+            "value": "~25"
+          },
+          {
+            "label": "peak near x=6",
+            "value": "~80"
+          },
+          {
+            "label": "trough near x=8",
+            "value": "~30"
+          }
+        ],
+        "trend": "cyclic"
+      },
+      {
+        "color": "green",
+        "name": "disk_io",
+        "notable_values": [
+          {
+            "label": "start (x=0)",
+            "value": "~70"
+          },
+          {
+            "label": "end (x=60)",
+            "value": "~45"
+          }
+        ],
+        "trend": "volatile"
+      },
+      {
+        "color": "red",
+        "name": "net_in_mbps",
+        "notable_values": [
+          {
+            "label": "start (x=0)",
+            "value": "~35"
+          },
+          {
+            "label": "end (x=60)",
+            "value": "~35"
+          }
+        ],
+        "trend": "volatile"
+      },
+      {
+        "color": "purple",
+        "name": "net_out_mbps",
+        "notable_values": [
+          {
+            "label": "start (x=0)",
+            "value": "~26"
+          },
+          {
+            "label": "peak near x=22",
+            "value": "~48"
+          },
+          {
+            "label": "end (x=60)",
+            "value": "~48"
+          }
+        ],
+        "trend": "volatile"
+      },
+      {
+        "color": "brown",
+        "name": "requests_qps",
+        "notable_values": [
+          {
+            "label": "start (x=0)",
+            "value": "~72"
+          },
+          {
+            "label": "end (x=60)",
+            "value": "~62"
+          }
+        ],
+        "trend": "volatile"
+      }
+    ],
+    "summary": "This line chart displays six process telemetry metrics over time. The 'memory_kb' series, shown in orange, exhibits a steady, linear increase from a value of 50 at timestamp 0 to approximately 90 at timestamp 60. At the specific timestamp x=42, the value for 'memory_kb' is approximately 78. Other metrics like 'cpu_pct' and 'requests_qps' show more volatile or cyclical patterns.",
+    "title": "Process telemetry"
+  },
+  "summary": "This line chart displays six process telemetry metrics over time. The 'memory_kb' series, shown in orange, exhibits a steady, linear increase from a value of 50 at timestamp 0 to approximately 90 at timestamp 60. At the specific timestamp x=42, the value for 'memory_kb' is approximately 78. Other metrics like 'cpu_pct' and 'requests_qps' show more volatile or cyclical patterns.",
+  "thoughts_tokens": 66,
+  "total_tokens": 1903
+}

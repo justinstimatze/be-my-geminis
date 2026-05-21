@@ -1,0 +1,3 @@
+**Panel C** shows the strongest linear correlation.
+
+**Justification:** The points in Panel C fall tightly along a clear upward-sloping line from the lower-left to the upper-right, with very little scatter around that trend. In contrast, Panels A and B appear as diffuse clouds with no clear direction, and Panel D shows only a weak upward tendency with substantial vertical spread. The tight, near-linear alignment in Panel C indicates a correlation coefficient close to +1.

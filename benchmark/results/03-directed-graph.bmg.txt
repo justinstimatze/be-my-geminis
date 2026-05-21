@@ -1,0 +1,1 @@
+This diagram illustrates a simple approval workflow as a directed graph. The process begins at a 'start' node and proceeds to a 'validate' step. From validation, the workflow can either move to 'approve' and then 'end', or it can be sent to 'reject'. A rejected item is then moved to a 'queue', which loops back to the 'validate' step for reprocessing.

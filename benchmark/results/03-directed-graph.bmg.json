@@ -1,0 +1,126 @@
+{
+  "elements": null,
+  "latency_ms": 7842,
+  "model": "gemini-2.5-pro",
+  "profile": "diagram",
+  "prompt_tokens": 749,
+  "structured": {
+    "diagram_type": "flowchart",
+    "edges": [
+      {
+        "direction": "forward",
+        "from_id": "start",
+        "label": "",
+        "to_id": "validate"
+      },
+      {
+        "direction": "forward",
+        "from_id": "validate",
+        "label": "",
+        "to_id": "approve"
+      },
+      {
+        "direction": "forward",
+        "from_id": "approve",
+        "label": "",
+        "to_id": "end"
+      },
+      {
+        "direction": "forward",
+        "from_id": "validate",
+        "label": "",
+        "to_id": "reject"
+      },
+      {
+        "direction": "forward",
+        "from_id": "reject",
+        "label": "",
+        "to_id": "queue"
+      },
+      {
+        "direction": "forward",
+        "from_id": "queue",
+        "label": "",
+        "to_id": "validate"
+      }
+    ],
+    "nodes": [
+      {
+        "box_2d": [
+          460,
+          40,
+          520,
+          185
+        ],
+        "id": "start",
+        "kind": "start",
+        "label": "start",
+        "text": "start"
+      },
+      {
+        "box_2d": [
+          460,
+          280,
+          520,
+          425
+        ],
+        "id": "validate",
+        "kind": "process",
+        "label": "validate",
+        "text": "validate"
+      },
+      {
+        "box_2d": [
+          460,
+          522,
+          520,
+          667
+        ],
+        "id": "approve",
+        "kind": "process",
+        "label": "approve",
+        "text": "approve"
+      },
+      {
+        "box_2d": [
+          460,
+          762,
+          520,
+          907
+        ],
+        "id": "end",
+        "kind": "end",
+        "label": "end",
+        "text": "end"
+      },
+      {
+        "box_2d": [
+          697,
+          280,
+          757,
+          425
+        ],
+        "id": "reject",
+        "kind": "process",
+        "label": "reject",
+        "text": "reject"
+      },
+      {
+        "box_2d": [
+          697,
+          522,
+          757,
+          667
+        ],
+        "id": "queue",
+        "kind": "process",
+        "label": "queue",
+        "text": "queue"
+      }
+    ],
+    "summary": "This diagram illustrates a simple approval workflow as a directed graph. The process begins at a 'start' node and proceeds to a 'validate' step. From validation, the workflow can either move to 'approve' and then 'end', or it can be sent to 'reject'. A rejected item is then moved to a 'queue', which loops back to the 'validate' step for reprocessing."
+  },
+  "summary": "This diagram illustrates a simple approval workflow as a directed graph. The process begins at a 'start' node and proceeds to a 'validate' step. From validation, the workflow can either move to 'approve' and then 'end', or it can be sent to 'reject'. A rejected item is then moved to a 'queue', which loops back to the 'validate' step for reprocessing.",
+  "thoughts_tokens": 37,
+  "total_tokens": 1580
+}

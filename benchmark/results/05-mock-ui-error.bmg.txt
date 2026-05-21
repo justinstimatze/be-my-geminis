@@ -1,0 +1,1 @@
+The user is on the Acme Dashboard page, but their session has expired. A prominent red error banner at the top of the main content area displays the message "Session expired" and instructs the user to "Please sign in again to continue.". The rest of the dashboard content, such as 'Recent activity' and 'Reports', appears to be in a loading or inactive state.

@@ -1,0 +1,544 @@
+{
+  "elements": [
+    {
+      "box_2d": [
+        30,
+        392,
+        52,
+        607
+      ],
+      "label": "chart_title",
+      "kind": "text",
+      "text": "Annotated clusters"
+    },
+    {
+      "box_2d": [
+        69,
+        64,
+        939,
+        954
+      ],
+      "label": "scatter_plot",
+      "kind": "container",
+      "text": ""
+    },
+    {
+      "box_2d": [
+        954,
+        509,
+        976,
+        520
+      ],
+      "label": "x_axis_label",
+      "kind": "text",
+      "text": "x"
+    },
+    {
+      "box_2d": [
+        443,
+        29,
+        456,
+        46
+      ],
+      "label": "y_axis_label",
+      "kind": "text",
+      "text": "y"
+    },
+    {
+      "box_2d": [
+        69,
+        64,
+        93,
+        130
+      ],
+      "label": "y_axis_tick_label",
+      "kind": "text",
+      "text": "10"
+    },
+    {
+      "box_2d": [
+        183,
+        64,
+        205,
+        130
+      ],
+      "label": "y_axis_tick_label",
+      "kind": "text",
+      "text": "8"
+    },
+    {
+      "box_2d": [
+        297,
+        64,
+        319,
+        130
+      ],
+      "label": "y_axis_tick_label",
+      "kind": "text",
+      "text": "6"
+    },
+    {
+      "box_2d": [
+        411,
+        64,
+        433,
+        130
+      ],
+      "label": "y_axis_tick_label",
+      "kind": "text",
+      "text": "4"
+    },
+    {
+      "box_2d": [
+        525,
+        64,
+        547,
+        130
+      ],
+      "label": "y_axis_tick_label",
+      "kind": "text",
+      "text": "2"
+    },
+    {
+      "box_2d": [
+        639,
+        64,
+        661,
+        130
+      ],
+      "label": "y_axis_tick_label",
+      "kind": "text",
+      "text": "0"
+    },
+    {
+      "box_2d": [
+        639,
+        154,
+        661,
+        219
+      ],
+      "label": "x_axis_tick_label",
+      "kind": "text",
+      "text": "0"
+    },
+    {
+      "box_2d": [
+        639,
+        278,
+        661,
+        343
+      ],
+      "label": "x_axis_tick_label",
+      "kind": "text",
+      "text": "2"
+    },
+    {
+      "box_2d": [
+        639,
+        402,
+        661,
+        467
+      ],
+      "label": "x_axis_tick_label",
+      "kind": "text",
+      "text": "4"
+    },
+    {
+      "box_2d": [
+        639,
+        526,
+        661,
+        591
+      ],
+      "label": "x_axis_tick_label",
+      "kind": "text",
+      "text": "6"
+    },
+    {
+      "box_2d": [
+        639,
+        650,
+        661,
+        715
+      ],
+      "label": "x_axis_tick_label",
+      "kind": "text",
+      "text": "8"
+    },
+    {
+      "box_2d": [
+        639,
+        774,
+        661,
+        839
+      ],
+      "label": "x_axis_tick_label",
+      "kind": "text",
+      "text": "10"
+    },
+    {
+      "box_2d": [
+        269,
+        201,
+        294,
+        265
+      ],
+      "label": "cluster_label",
+      "kind": "text",
+      "text": "alpha"
+    },
+    {
+      "box_2d": [
+        149,
+        819,
+        174,
+        880
+      ],
+      "label": "cluster_label",
+      "kind": "text",
+      "text": "delta"
+    },
+    {
+      "box_2d": [
+        600,
+        77,
+        625,
+        158
+      ],
+      "label": "cluster_label",
+      "kind": "text",
+      "text": "gamma"
+    },
+    {
+      "box_2d": [
+        586,
+        924,
+        611,
+        978
+      ],
+      "label": "cluster_label",
+      "kind": "text",
+      "text": "beta"
+    },
+    {
+      "box_2d": [
+        420,
+        247,
+        555,
+        432
+      ],
+      "label": "alpha_cluster",
+      "kind": "other",
+      "text": ""
+    },
+    {
+      "box_2d": [
+        157,
+        621,
+        366,
+        819
+      ],
+      "label": "delta_cluster",
+      "kind": "other",
+      "text": ""
+    },
+    {
+      "box_2d": [
+        484,
+        90,
+        618,
+        258
+      ],
+      "label": "gamma_cluster",
+      "kind": "other",
+      "text": ""
+    },
+    {
+      "box_2d": [
+        499,
+        648,
+        624,
+        859
+      ],
+      "label": "beta_cluster",
+      "kind": "other",
+      "text": ""
+    }
+  ],
+  "latency_ms": 12389,
+  "model": "gemini-2.5-pro",
+  "profile": "general",
+  "prompt_tokens": 581,
+  "structured": {
+    "elements": [
+      {
+        "box_2d": [
+          30,
+          392,
+          52,
+          607
+        ],
+        "kind": "text",
+        "label": "chart_title",
+        "text": "Annotated clusters"
+      },
+      {
+        "box_2d": [
+          69,
+          64,
+          939,
+          954
+        ],
+        "kind": "container",
+        "label": "scatter_plot",
+        "text": ""
+      },
+      {
+        "box_2d": [
+          954,
+          509,
+          976,
+          520
+        ],
+        "kind": "text",
+        "label": "x_axis_label",
+        "text": "x"
+      },
+      {
+        "box_2d": [
+          443,
+          29,
+          456,
+          46
+        ],
+        "kind": "text",
+        "label": "y_axis_label",
+        "text": "y"
+      },
+      {
+        "box_2d": [
+          69,
+          64,
+          93,
+          130
+        ],
+        "kind": "text",
+        "label": "y_axis_tick_label",
+        "text": "10"
+      },
+      {
+        "box_2d": [
+          183,
+          64,
+          205,
+          130
+        ],
+        "kind": "text",
+        "label": "y_axis_tick_label",
+        "text": "8"
+      },
+      {
+        "box_2d": [
+          297,
+          64,
+          319,
+          130
+        ],
+        "kind": "text",
+        "label": "y_axis_tick_label",
+        "text": "6"
+      },
+      {
+        "box_2d": [
+          411,
+          64,
+          433,
+          130
+        ],
+        "kind": "text",
+        "label": "y_axis_tick_label",
+        "text": "4"
+      },
+      {
+        "box_2d": [
+          525,
+          64,
+          547,
+          130
+        ],
+        "kind": "text",
+        "label": "y_axis_tick_label",
+        "text": "2"
+      },
+      {
+        "box_2d": [
+          639,
+          64,
+          661,
+          130
+        ],
+        "kind": "text",
+        "label": "y_axis_tick_label",
+        "text": "0"
+      },
+      {
+        "box_2d": [
+          639,
+          154,
+          661,
+          219
+        ],
+        "kind": "text",
+        "label": "x_axis_tick_label",
+        "text": "0"
+      },
+      {
+        "box_2d": [
+          639,
+          278,
+          661,
+          343
+        ],
+        "kind": "text",
+        "label": "x_axis_tick_label",
+        "text": "2"
+      },
+      {
+        "box_2d": [
+          639,
+          402,
+          661,
+          467
+        ],
+        "kind": "text",
+        "label": "x_axis_tick_label",
+        "text": "4"
+      },
+      {
+        "box_2d": [
+          639,
+          526,
+          661,
+          591
+        ],
+        "kind": "text",
+        "label": "x_axis_tick_label",
+        "text": "6"
+      },
+      {
+        "box_2d": [
+          639,
+          650,
+          661,
+          715
+        ],
+        "kind": "text",
+        "label": "x_axis_tick_label",
+        "text": "8"
+      },
+      {
+        "box_2d": [
+          639,
+          774,
+          661,
+          839
+        ],
+        "kind": "text",
+        "label": "x_axis_tick_label",
+        "text": "10"
+      },
+      {
+        "box_2d": [
+          269,
+          201,
+          294,
+          265
+        ],
+        "kind": "text",
+        "label": "cluster_label",
+        "text": "alpha"
+      },
+      {
+        "box_2d": [
+          149,
+          819,
+          174,
+          880
+        ],
+        "kind": "text",
+        "label": "cluster_label",
+        "text": "delta"
+      },
+      {
+        "box_2d": [
+          600,
+          77,
+          625,
+          158
+        ],
+        "kind": "text",
+        "label": "cluster_label",
+        "text": "gamma"
+      },
+      {
+        "box_2d": [
+          586,
+          924,
+          611,
+          978
+        ],
+        "kind": "text",
+        "label": "cluster_label",
+        "text": "beta"
+      },
+      {
+        "box_2d": [
+          420,
+          247,
+          555,
+          432
+        ],
+        "kind": "other",
+        "label": "alpha_cluster",
+        "text": ""
+      },
+      {
+        "box_2d": [
+          157,
+          621,
+          366,
+          819
+        ],
+        "kind": "other",
+        "label": "delta_cluster",
+        "text": ""
+      },
+      {
+        "box_2d": [
+          484,
+          90,
+          618,
+          258
+        ],
+        "kind": "other",
+        "label": "gamma_cluster",
+        "text": ""
+      },
+      {
+        "box_2d": [
+          499,
+          648,
+          624,
+          859
+        ],
+        "kind": "other",
+        "label": "beta_cluster",
+        "text": ""
+      }
+    ],
+    "summary": "A scatter plot titled 'Annotated clusters' displays four distinct clusters of data points on a 2D plane. The x and y axes both range from 0 to 10. Each cluster is color-coded and labeled: 'alpha' (blue) is in the top-left quadrant, 'delta' (red) is in the top-right, 'gamma' (green) is in the bottom-left, and 'beta' (orange) is in the bottom-right. Arrows point from each label to its corresponding cluster, aiding in identification."
+  },
+  "summary": "A scatter plot titled 'Annotated clusters' displays four distinct clusters of data points on a 2D plane. The x and y axes both range from 0 to 10. Each cluster is color-coded and labeled: 'alpha' (blue) is in the top-left quadrant, 'delta' (red) is in the top-right, 'gamma' (green) is in the bottom-left, and 'beta' (orange) is in the bottom-right. Arrows point from each label to its corresponding cluster, aiding in identification.",
+  "thoughts_tokens": 84,
+  "total_tokens": 2268
+}

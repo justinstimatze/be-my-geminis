@@ -1,0 +1,30 @@
+```json
+{
+  "nodes": [
+    {"id": "start", "kind": "start"},
+    {"id": "fetch", "kind": "process"},
+    {"id": "validate", "kind": "decision"},
+    {"id": "transform", "kind": "process"},
+    {"id": "approve", "kind": "process"},
+    {"id": "end", "kind": "end"},
+    {"id": "retry", "kind": "decision"},
+    {"id": "reject", "kind": "process"},
+    {"id": "audit", "kind": "process"},
+    {"id": "deadletter", "kind": "end"}
+  ],
+  "edges": [
+    {"from": "start", "to": "fetch", "label": ""},
+    {"from": "fetch", "to": "validate", "label": ""},
+    {"from": "validate", "to": "transform", "label": "ok"},
+    {"from": "transform", "to": "approve", "label": ""},
+    {"from": "approve", "to": "end", "label": ""},
+    {"from": "fetch", "to": "retry", "label": "yes"},
+    {"from": "validate", "to": "reject", "label": "bad"},
+    {"from": "retry", "to": "reject", "label": "no"},
+    {"from": "reject", "to": "audit", "label": ""},
+    {"from": "transform", "to": "audit", "label": "spot-check"},
+    {"from": "audit", "to": "approve", "label": "sample"},
+    {"from": "audit", "to": "deadletter", "label": "fail"}
+  ]
+}
+```

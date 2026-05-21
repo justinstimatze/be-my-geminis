@@ -1,0 +1,858 @@
+{
+  "elements": [
+    {
+      "box_2d": [
+        32,
+        10,
+        52,
+        519
+      ],
+      "label": "window_title_bar",
+      "kind": "",
+      "text": "[xfce] (importada)-2.0 (Color RGB Entero gamma de 8 bits, GIMP built-in sRGB, 1 capa) 1920x1080 - GIMP"
+    },
+    {
+      "box_2d": [
+        57,
+        10,
+        80,
+        66
+      ],
+      "label": "archivo_menu",
+      "kind": "",
+      "text": "Archivo"
+    },
+    {
+      "box_2d": [
+        57,
+        73,
+        80,
+        114
+      ],
+      "label": "editar_menu",
+      "kind": "",
+      "text": "Editar"
+    },
+    {
+      "box_2d": [
+        57,
+        121,
+        80,
+        198
+      ],
+      "label": "seleccionar_menu",
+      "kind": "",
+      "text": "Seleccionar"
+    },
+    {
+      "box_2d": [
+        57,
+        205,
+        80,
+        239
+      ],
+      "label": "vista_menu",
+      "kind": "",
+      "text": "Vista"
+    },
+    {
+      "box_2d": [
+        57,
+        246,
+        80,
+        298
+      ],
+      "label": "imagen_menu",
+      "kind": "",
+      "text": "Imagen"
+    },
+    {
+      "box_2d": [
+        57,
+        305,
+        80,
+        342
+      ],
+      "label": "capa_menu",
+      "kind": "",
+      "text": "Capa"
+    },
+    {
+      "box_2d": [
+        57,
+        349,
+        80,
+        401
+      ],
+      "label": "colores_menu",
+      "kind": "",
+      "text": "Colores"
+    },
+    {
+      "box_2d": [
+        57,
+        408,
+        80,
+        499
+      ],
+      "label": "herramientas_menu",
+      "kind": "",
+      "text": "Herramientas"
+    },
+    {
+      "box_2d": [
+        57,
+        506,
+        80,
+        552
+      ],
+      "label": "filtros_menu",
+      "kind": "",
+      "text": "Filtros"
+    },
+    {
+      "box_2d": [
+        57,
+        559,
+        80,
+        623
+      ],
+      "label": "ventanas_menu",
+      "kind": "",
+      "text": "Ventanas"
+    },
+    {
+      "box_2d": [
+        57,
+        630,
+        80,
+        673
+      ],
+      "label": "ayuda_menu",
+      "kind": "",
+      "text": "Ayuda"
+    },
+    {
+      "box_2d": [
+        100,
+        10,
+        425,
+        136
+      ],
+      "label": "toolbox",
+      "kind": "",
+      "text": ""
+    },
+    {
+      "box_2d": [
+        393,
+        10,
+        425,
+        136
+      ],
+      "label": "umbral_bn_tool",
+      "kind": "",
+      "text": ""
+    },
+    {
+      "box_2d": [
+        428,
+        10,
+        564,
+        136
+      ],
+      "label": "tool_options_panel",
+      "kind": "",
+      "text": "Umbral B/N\nEsta herramienta no tiene opciones."
+    },
+    {
+      "box_2d": [
+        432,
+        10,
+        450,
+        81
+      ],
+      "label": "tool_options_title",
+      "kind": "",
+      "text": "Umbral B/N"
+    },
+    {
+      "box_2d": [
+        460,
+        20,
+        488,
+        125
+      ],
+      "label": "tool_options_message",
+      "kind": "",
+      "text": "Esta herramienta no tiene opciones."
+    },
+    {
+      "box_2d": [
+        225,
+        162,
+        894,
+        820
+      ],
+      "label": "image_canvas",
+      "kind": "",
+      "text": ""
+    },
+    {
+      "box_2d": [
+        100,
+        858,
+        142,
+        989
+      ],
+      "label": "brush_panel_tabs",
+      "kind": "",
+      "text": ""
+    },
+    {
+      "box_2d": [
+        105,
+        863,
+        136,
+        889
+      ],
+      "label": "brush_tab",
+      "kind": "",
+      "text": ""
+    },
+    {
+      "box_2d": [
+        105,
+        891,
+        136,
+        917
+      ],
+      "label": "patterns_tab",
+      "kind": "",
+      "text": ""
+    },
+    {
+      "box_2d": [
+        105,
+        919,
+        136,
+        945
+      ],
+      "label": "fonts_tab",
+      "kind": "",
+      "text": "Aa"
+    },
+    {
+      "box_2d": [
+        144,
+        858,
+        509,
+        989
+      ],
+      "label": "brush_panel",
+      "kind": "",
+      "text": "filtro\n2. Hardness 050 (51 x 51)\nBasic,\nEspaciado\n10.0"
+    },
+    {
+      "box_2d": [
+        148,
+        863,
+        170,
+        984
+      ],
+      "label": "filter_input",
+      "kind": "",
+      "text": "filtro"
+    },
+    {
+      "box_2d": [
+        175,
+        863,
+        200,
+        984
+      ],
+      "label": "selected_brush_text",
+      "kind": "",
+      "text": "2. Hardness 050 (51 x 51)"
+    },
+    {
+      "box_2d": [
+        202,
+        863,
+        400,
+        984
+      ],
+      "label": "brush_selection_grid",
+      "kind": "",
+      "text": ""
+    },
+    {
+      "box_2d": [
+        511,
+        858,
+        553,
+        989
+      ],
+      "label": "layers_panel_tabs",
+      "kind": "",
+      "text": ""
+    },
+    {
+      "box_2d": [
+        516,
+        863,
+        547,
+        889
+      ],
+      "label": "layers_tab",
+      "kind": "",
+      "text": ""
+    },
+    {
+      "box_2d": [
+        516,
+        891,
+        547,
+        917
+      ],
+      "label": "channels_tab",
+      "kind": "",
+      "text": ""
+    },
+    {
+      "box_2d": [
+        516,
+        919,
+        547,
+        945
+      ],
+      "label": "paths_tab",
+      "kind": "",
+      "text": ""
+    },
+    {
+      "box_2d": [
+        555,
+        858,
+        894,
+        989
+      ],
+      "label": "layers_panel",
+      "kind": "",
+      "text": "Modo\nNormal\nOpacidad\n100.0\nBloquear:\nxfce.png"
+    },
+    {
+      "box_2d": [
+        560,
+        863,
+        582,
+        984
+      ],
+      "label": "mode_dropdown",
+      "kind": "",
+      "text": "Normal"
+    },
+    {
+      "box_2d": [
+        589,
+        863,
+        611,
+        984
+      ],
+      "label": "opacity_slider",
+      "kind": "",
+      "text": "100.0"
+    },
+    {
+      "box_2d": [
+        648,
+        863,
+        698,
+        984
+      ],
+      "label": "layer_list",
+      "kind": "",
+      "text": "xfce.png"
+    },
+    {
+      "box_2d": [
+        653,
+        886,
+        693,
+        984
+      ],
+      "label": "xfce_png_layer",
+      "kind": "",
+      "text": "xfce.png"
+    }
+  ],
+  "latency_ms": 20122,
+  "model": "gemini-2.5-pro",
+  "profile": "screenshot",
+  "prompt_tokens": 709,
+  "structured": {
+    "elements": [
+      {
+        "box_2d": [
+          32,
+          10,
+          52,
+          519
+        ],
+        "is_interactive": false,
+        "label": "window_title_bar",
+        "role": "container",
+        "state": "active",
+        "text": "[xfce] (importada)-2.0 (Color RGB Entero gamma de 8 bits, GIMP built-in sRGB, 1 capa) 1920x1080 - GIMP"
+      },
+      {
+        "box_2d": [
+          57,
+          10,
+          80,
+          66
+        ],
+        "is_interactive": true,
+        "label": "archivo_menu",
+        "role": "menu",
+        "state": "enabled",
+        "text": "Archivo"
+      },
+      {
+        "box_2d": [
+          57,
+          73,
+          80,
+          114
+        ],
+        "is_interactive": true,
+        "label": "editar_menu",
+        "role": "menu",
+        "state": "enabled",
+        "text": "Editar"
+      },
+      {
+        "box_2d": [
+          57,
+          121,
+          80,
+          198
+        ],
+        "is_interactive": true,
+        "label": "seleccionar_menu",
+        "role": "menu",
+        "state": "enabled",
+        "text": "Seleccionar"
+      },
+      {
+        "box_2d": [
+          57,
+          205,
+          80,
+          239
+        ],
+        "is_interactive": true,
+        "label": "vista_menu",
+        "role": "menu",
+        "state": "enabled",
+        "text": "Vista"
+      },
+      {
+        "box_2d": [
+          57,
+          246,
+          80,
+          298
+        ],
+        "is_interactive": true,
+        "label": "imagen_menu",
+        "role": "menu",
+        "state": "enabled",
+        "text": "Imagen"
+      },
+      {
+        "box_2d": [
+          57,
+          305,
+          80,
+          342
+        ],
+        "is_interactive": true,
+        "label": "capa_menu",
+        "role": "menu",
+        "state": "enabled",
+        "text": "Capa"
+      },
+      {
+        "box_2d": [
+          57,
+          349,
+          80,
+          401
+        ],
+        "is_interactive": true,
+        "label": "colores_menu",
+        "role": "menu",
+        "state": "enabled",
+        "text": "Colores"
+      },
+      {
+        "box_2d": [
+          57,
+          408,
+          80,
+          499
+        ],
+        "is_interactive": true,
+        "label": "herramientas_menu",
+        "role": "menu",
+        "state": "enabled",
+        "text": "Herramientas"
+      },
+      {
+        "box_2d": [
+          57,
+          506,
+          80,
+          552
+        ],
+        "is_interactive": true,
+        "label": "filtros_menu",
+        "role": "menu",
+        "state": "enabled",
+        "text": "Filtros"
+      },
+      {
+        "box_2d": [
+          57,
+          559,
+          80,
+          623
+        ],
+        "is_interactive": true,
+        "label": "ventanas_menu",
+        "role": "menu",
+        "state": "enabled",
+        "text": "Ventanas"
+      },
+      {
+        "box_2d": [
+          57,
+          630,
+          80,
+          673
+        ],
+        "is_interactive": true,
+        "label": "ayuda_menu",
+        "role": "menu",
+        "state": "enabled",
+        "text": "Ayuda"
+      },
+      {
+        "box_2d": [
+          100,
+          10,
+          425,
+          136
+        ],
+        "is_interactive": false,
+        "label": "toolbox",
+        "role": "container",
+        "state": "active",
+        "text": ""
+      },
+      {
+        "box_2d": [
+          393,
+          10,
+          425,
+          136
+        ],
+        "is_interactive": true,
+        "label": "umbral_bn_tool",
+        "role": "button",
+        "state": "selected",
+        "text": ""
+      },
+      {
+        "box_2d": [
+          428,
+          10,
+          564,
+          136
+        ],
+        "is_interactive": false,
+        "label": "tool_options_panel",
+        "role": "container",
+        "state": "active",
+        "text": "Umbral B/N\nEsta herramienta no tiene opciones."
+      },
+      {
+        "box_2d": [
+          432,
+          10,
+          450,
+          81
+        ],
+        "is_interactive": false,
+        "label": "tool_options_title",
+        "role": "text",
+        "state": "unknown",
+        "text": "Umbral B/N"
+      },
+      {
+        "box_2d": [
+          460,
+          20,
+          488,
+          125
+        ],
+        "is_interactive": false,
+        "label": "tool_options_message",
+        "role": "text",
+        "state": "unknown",
+        "text": "Esta herramienta no tiene opciones."
+      },
+      {
+        "box_2d": [
+          225,
+          162,
+          894,
+          820
+        ],
+        "is_interactive": true,
+        "label": "image_canvas",
+        "role": "image",
+        "state": "active",
+        "text": ""
+      },
+      {
+        "box_2d": [
+          100,
+          858,
+          142,
+          989
+        ],
+        "is_interactive": false,
+        "label": "brush_panel_tabs",
+        "role": "container",
+        "state": "active",
+        "text": ""
+      },
+      {
+        "box_2d": [
+          105,
+          863,
+          136,
+          889
+        ],
+        "is_interactive": true,
+        "label": "brush_tab",
+        "role": "tab",
+        "state": "selected",
+        "text": ""
+      },
+      {
+        "box_2d": [
+          105,
+          891,
+          136,
+          917
+        ],
+        "is_interactive": true,
+        "label": "patterns_tab",
+        "role": "tab",
+        "state": "inactive",
+        "text": ""
+      },
+      {
+        "box_2d": [
+          105,
+          919,
+          136,
+          945
+        ],
+        "is_interactive": true,
+        "label": "fonts_tab",
+        "role": "tab",
+        "state": "inactive",
+        "text": "Aa"
+      },
+      {
+        "box_2d": [
+          144,
+          858,
+          509,
+          989
+        ],
+        "is_interactive": false,
+        "label": "brush_panel",
+        "role": "container",
+        "state": "active",
+        "text": "filtro\n2. Hardness 050 (51 x 51)\nBasic,\nEspaciado\n10.0"
+      },
+      {
+        "box_2d": [
+          148,
+          863,
+          170,
+          984
+        ],
+        "is_interactive": true,
+        "label": "filter_input",
+        "role": "input",
+        "state": "filled",
+        "text": "filtro"
+      },
+      {
+        "box_2d": [
+          175,
+          863,
+          200,
+          984
+        ],
+        "is_interactive": false,
+        "label": "selected_brush_text",
+        "role": "text",
+        "state": "unknown",
+        "text": "2. Hardness 050 (51 x 51)"
+      },
+      {
+        "box_2d": [
+          202,
+          863,
+          400,
+          984
+        ],
+        "is_interactive": true,
+        "label": "brush_selection_grid",
+        "role": "container",
+        "state": "active",
+        "text": ""
+      },
+      {
+        "box_2d": [
+          511,
+          858,
+          553,
+          989
+        ],
+        "is_interactive": false,
+        "label": "layers_panel_tabs",
+        "role": "container",
+        "state": "active",
+        "text": ""
+      },
+      {
+        "box_2d": [
+          516,
+          863,
+          547,
+          889
+        ],
+        "is_interactive": true,
+        "label": "layers_tab",
+        "role": "tab",
+        "state": "selected",
+        "text": ""
+      },
+      {
+        "box_2d": [
+          516,
+          891,
+          547,
+          917
+        ],
+        "is_interactive": true,
+        "label": "channels_tab",
+        "role": "tab",
+        "state": "inactive",
+        "text": ""
+      },
+      {
+        "box_2d": [
+          516,
+          919,
+          547,
+          945
+        ],
+        "is_interactive": true,
+        "label": "paths_tab",
+        "role": "tab",
+        "state": "inactive",
+        "text": ""
+      },
+      {
+        "box_2d": [
+          555,
+          858,
+          894,
+          989
+        ],
+        "is_interactive": false,
+        "label": "layers_panel",
+        "role": "container",
+        "state": "active",
+        "text": "Modo\nNormal\nOpacidad\n100.0\nBloquear:\nxfce.png"
+      },
+      {
+        "box_2d": [
+          560,
+          863,
+          582,
+          984
+        ],
+        "is_interactive": true,
+        "label": "mode_dropdown",
+        "role": "input",
+        "state": "filled",
+        "text": "Normal"
+      },
+      {
+        "box_2d": [
+          589,
+          863,
+          611,
+          984
+        ],
+        "is_interactive": true,
+        "label": "opacity_slider",
+        "role": "input",
+        "state": "filled",
+        "text": "100.0"
+      },
+      {
+        "box_2d": [
+          648,
+          863,
+          698,
+          984
+        ],
+        "is_interactive": true,
+        "label": "layer_list",
+        "role": "container",
+        "state": "active",
+        "text": "xfce.png"
+      },
+      {
+        "box_2d": [
+          653,
+          886,
+          693,
+          984
+        ],
+        "is_interactive": true,
+        "label": "xfce_png_layer",
+        "role": "button",
+        "state": "selected",
+        "text": "xfce.png"
+      }
+    ],
+    "focused_element_label": "xfce_png_layer",
+    "screen_title": "[xfce] (importada)-2.0 (Color RGB Entero gamma de 8 bits, GIMP built-in sRGB, 1 capa) 1920x1080 - GIMP",
+    "summary": "The user is viewing an image named 'xfce.png' in the GIMP image editing application. The main interface is visible, including the top menu bar, a toolbox on the left, and several docked panels on the right for managing brushes, layers, and other properties. The 'Umbral B/N' (Threshold) tool is currently selected in the toolbox, and the 'xfce.png' layer is active in the Layers panel."
+  },
+  "summary": "The user is viewing an image named 'xfce.png' in the GIMP image editing application. The main interface is visible, including the top menu bar, a toolbox on the left, and several docked panels on the right for managing brushes, layers, and other properties. The 'Umbral B/N' (Threshold) tool is currently selected in the toolbox, and the 'xfce.png' layer is active in the Layers panel.",
+  "thoughts_tokens": 81,
+  "total_tokens": 3758
+}

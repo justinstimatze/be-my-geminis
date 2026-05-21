@@ -1,0 +1,17 @@
+# Quarterly Revenue 2026 ($M)
+
+Based on the bar chart, here are the values for each quarter:
+
+| Quarter | Revenue ($M) |
+|---------|-------------|
+| Q1 | $42M |
+| Q2 | $18M |
+| Q3 | $7M (highlighted in red) |
+| Q4 | $23M |
+
+**Highest Quarter:** **Q1 with $42 million** in revenue.
+
+**Additional observations:**
+- **Lowest Quarter:** Q3 at just $7M (notably highlighted in red, likely to flag it as a concern)
+- **Total Annual Revenue:** $90M ($42 + $18 + $7 + $23)
+- Revenue dropped sharply from Q1 to Q3 (a decline of $35M, or ~83%), before recovering somewhat in Q4

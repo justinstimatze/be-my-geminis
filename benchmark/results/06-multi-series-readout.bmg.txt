@@ -1,0 +1,1 @@
+This line chart displays six process telemetry metrics over time. The 'memory_kb' series, shown in orange, exhibits a steady, linear increase from a value of 50 at timestamp 0 to approximately 90 at timestamp 60. At the specific timestamp x=42, the value for 'memory_kb' is approximately 78. Other metrics like 'cpu_pct' and 'requests_qps' show more volatile or cyclical patterns.

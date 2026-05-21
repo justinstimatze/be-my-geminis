@@ -1,0 +1,16 @@
+=== Pressure test 7: real-image variety corpus ===
+
+corpus: 10 images in /home/gas6amus/Documents/be-my-geminis/pressure_test/fixtures/corpus
+
+  PASS  tiny_50x50.png                 (      467B) — The image displays a dark blue background with a single word, "tiny," rendered in a lighter shade of
+  PASS  normal_640x480.jpg             (     5701B) — The image displays a solid blue background, serving as a canvas for a single textual element located
+  PASS  wide_2000x200.png              (     2763B) — The image displays a solid blue background. In the top-left corner, there is a small, light grey tex
+  PASS  tall_200x2000.png              (     5879B) — The image is a plain blue background with a very subtle, almost unreadable text fragment in the top-
+  PASS  huge_3000x3000.png             (    33778B) — The image displays a solid blue background, devoid of any significant visual elements. In the top-le
+  PASS  gif_400x300.gif                (      898B) — The image features a solid blue background, occupying the entire frame. In the top-left corner, the 
+  PASS  bmp_400x300.bmp                (   360054B) — The image presented is largely a solid blue background. In the top-left corner, there is a small, di
+  PASS  webp_400x300.webp              (      508B) — The image displays a solid blue background, typical of a default or placeholder screen. In the top-l
+  PASS  tiff_400x300.tiff              (   360140B) — The image displays a solid blue background, resembling a desktop screen or a simple graphical interf
+  PASS  greyscale_400x300.png          (     1149B) — The image displays a solid grey background, which is a uniform medium dark grey color. In the top-le
+
+=== summary: 10 pass, 0 fail ===

@@ -1,0 +1,37 @@
+name: release
+
+# Fires on annotated tag push (v0.2.0, v0.3.0-rc1, etc.). Run goreleaser
+# to build linux/darwin × amd64/arm64 binaries, attach them to the GitHub
+# release with sha256 checksums.
+on:
+  push:
+    tags: ['v*']
+
+permissions:
+  contents: write  # required to create release + upload artifacts
+
+jobs:
+  goreleaser:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          # goreleaser uses git history for the changelog block.
+          fetch-depth: 0
+
+      - uses: actions/setup-go@v5
+        with:
+          go-version: '1.26'
+          cache: true
+
+      - name: go mod tidy (verify no diff at release time)
+        run: |
+          go mod tidy
+          git diff --exit-code go.mod go.sum
+
+      - uses: goreleaser/goreleaser-action@v6
+        with:
+          version: '~> v2'
+          args: release --clean
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

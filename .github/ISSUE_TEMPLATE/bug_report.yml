@@ -1,0 +1,99 @@
+name: Bug report
+description: Something bmg did wrong — hook fired badly, MCP call failed, install broke, output is wrong.
+title: "[bug] "
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for filing! A few specifics make bugs much faster to
+        investigate. Please fill in what you can — empty fields are
+        fine if the question doesn't apply.
+
+  - type: textarea
+    id: what_happened
+    attributes:
+      label: What happened
+      description: One-sentence summary plus expected vs actual behavior.
+      placeholder: |
+        Expected: bmg describes the image and returns JSON.
+        Actual: bmg returned "vision: generate: Error 400 ...".
+    validations:
+      required: true
+
+  - type: textarea
+    id: repro
+    attributes:
+      label: Reproduction steps
+      description: Smallest sequence of commands that reproduces the bug. A synthetic test image is strongly preferred over a real one.
+      placeholder: |
+        1. bmg init --enable-mcp
+        2. cd into a CC project, run claude
+        3. Read tools/test.png (attached)
+        4. Observe error
+      render: shell
+    validations:
+      required: true
+
+  - type: input
+    id: bmg_version
+    attributes:
+      label: bmg version
+      description: Output of `bmg version` (or the commit hash if you built from source).
+      placeholder: "0.1.0 (or git: abc1234)"
+    validations:
+      required: true
+
+  - type: input
+    id: cc_version
+    attributes:
+      label: Claude Code version
+      description: Output of `claude --version`.
+      placeholder: "2.1.126"
+    validations:
+      required: true
+
+  - type: dropdown
+    id: profile
+    attributes:
+      label: Profile in use (if relevant)
+      options:
+        - "general (the hook default)"
+        - chart
+        - diagram
+        - document
+        - screenshot
+        - code
+        - "not applicable / install bug"
+    validations:
+      required: false
+
+  - type: dropdown
+    id: os
+    attributes:
+      label: OS
+      options:
+        - Linux
+        - macOS
+        - Windows (untested upstream)
+        - Other
+    validations:
+      required: true
+
+  - type: textarea
+    id: doctor
+    attributes:
+      label: bmg doctor output
+      description: Run `bmg doctor` and paste the full output. Doctor never prints your API key, so this is safe to paste publicly.
+      render: shell
+    validations:
+      required: false
+
+  - type: textarea
+    id: hook_log
+    attributes:
+      label: Relevant hook log lines (if a hook bug)
+      description: Tail of `~/.claude/bmg/hook.log` around the time of the bug.
+      render: shell
+    validations:
+      required: false

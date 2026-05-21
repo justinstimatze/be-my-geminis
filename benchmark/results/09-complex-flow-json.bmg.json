@@ -1,0 +1,210 @@
+{
+  "elements": null,
+  "latency_ms": 11032,
+  "model": "gemini-2.5-pro",
+  "profile": "diagram",
+  "prompt_tokens": 756,
+  "structured": {
+    "diagram_type": "flowchart",
+    "edges": [
+      {
+        "direction": "forward",
+        "from_id": "start",
+        "label": "",
+        "to_id": "fetch"
+      },
+      {
+        "direction": "forward",
+        "from_id": "fetch",
+        "label": "",
+        "to_id": "validate"
+      },
+      {
+        "direction": "forward",
+        "from_id": "validate",
+        "label": "ok",
+        "to_id": "transform"
+      },
+      {
+        "direction": "forward",
+        "from_id": "validate",
+        "label": "bad",
+        "to_id": "reject"
+      },
+      {
+        "direction": "forward",
+        "from_id": "transform",
+        "label": "",
+        "to_id": "approve"
+      },
+      {
+        "direction": "forward",
+        "from_id": "transform",
+        "label": "spot-check",
+        "to_id": "audit"
+      },
+      {
+        "direction": "forward",
+        "from_id": "approve",
+        "label": "",
+        "to_id": "end"
+      },
+      {
+        "direction": "forward",
+        "from_id": "approve",
+        "label": "sample",
+        "to_id": "audit"
+      },
+      {
+        "direction": "forward",
+        "from_id": "retry",
+        "label": "yes",
+        "to_id": "fetch"
+      },
+      {
+        "direction": "forward",
+        "from_id": "reject",
+        "label": "",
+        "to_id": "retry"
+      },
+      {
+        "direction": "forward",
+        "from_id": "reject",
+        "label": "",
+        "to_id": "audit"
+      },
+      {
+        "direction": "forward",
+        "from_id": "audit",
+        "label": "fail",
+        "to_id": "deadletter"
+      }
+    ],
+    "nodes": [
+      {
+        "box_2d": [
+          470,
+          28,
+          559,
+          169
+        ],
+        "id": "start",
+        "kind": "start",
+        "label": "start",
+        "text": "start"
+      },
+      {
+        "box_2d": [
+          470,
+          200,
+          559,
+          310
+        ],
+        "id": "fetch",
+        "kind": "process",
+        "label": "fetch",
+        "text": "fetch"
+      },
+      {
+        "box_2d": [
+          470,
+          352,
+          559,
+          462
+        ],
+        "id": "validate",
+        "kind": "decision",
+        "label": "validate",
+        "text": "validate"
+      },
+      {
+        "box_2d": [
+          320,
+          514,
+          409,
+          624
+        ],
+        "id": "transform",
+        "kind": "process",
+        "label": "transform",
+        "text": "transform"
+      },
+      {
+        "box_2d": [
+          320,
+          676,
+          409,
+          786
+        ],
+        "id": "approve",
+        "kind": "process",
+        "label": "approve",
+        "text": "approve"
+      },
+      {
+        "box_2d": [
+          320,
+          838,
+          409,
+          948
+        ],
+        "id": "end",
+        "kind": "end",
+        "label": "end",
+        "text": "end"
+      },
+      {
+        "box_2d": [
+          700,
+          190,
+          789,
+          300
+        ],
+        "id": "retry",
+        "kind": "decision",
+        "label": "retry",
+        "text": "retry"
+      },
+      {
+        "box_2d": [
+          700,
+          352,
+          789,
+          462
+        ],
+        "id": "reject",
+        "kind": "process",
+        "label": "reject",
+        "text": "no\nreject"
+      },
+      {
+        "box_2d": [
+          700,
+          514,
+          789,
+          624
+        ],
+        "id": "audit",
+        "kind": "process",
+        "label": "audit",
+        "text": "audit"
+      },
+      {
+        "box_2d": [
+          700,
+          686,
+          789,
+          810
+        ],
+        "id": "deadletter",
+        "kind": "end",
+        "label": "deadletter",
+        "text": "deadletter"
+      }
+    ],
+    "summary": "This flowchart describes a payment processing workflow. The process begins by fetching and validating a payment. Successful validations lead to transformation and approval, ending the process. Failed validations result in rejection, which can either lead to a retry or an audit, with the audit potentially ending in a dead-letter queue."
+  },
+  "summary": "This flowchart describes a payment processing workflow. The process begins by fetching and validating a payment. Successful validations lead to transformation and approval, ending the process. Failed validations result in rejection, which can either lead to a retry or an audit, with the audit potentially ending in a dead-letter queue.",
+  "thoughts_tokens": 72,
+  "total_tokens": 2155
+}

@@ -1,0 +1,198 @@
+{
+  "elements": null,
+  "latency_ms": 11631,
+  "model": "gemini-2.5-pro",
+  "profile": "diagram",
+  "prompt_tokens": 772,
+  "structured": {
+    "diagram_type": "flowchart",
+    "edges": [
+      {
+        "direction": "forward",
+        "from_id": "set_bounds",
+        "label": "",
+        "to_id": "probe"
+      },
+      {
+        "direction": "forward",
+        "from_id": "probe",
+        "label": "",
+        "to_id": "search_exhausted"
+      },
+      {
+        "direction": "forward",
+        "from_id": "search_exhausted",
+        "label": "p = 0",
+        "to_id": "exit_not_found"
+      },
+      {
+        "direction": "forward",
+        "from_id": "search_exhausted",
+        "label": "p \u003e 0",
+        "to_id": "update_p"
+      },
+      {
+        "direction": "forward",
+        "from_id": "update_p",
+        "label": "",
+        "to_id": "compare_key"
+      },
+      {
+        "direction": "forward",
+        "from_id": "compare_key",
+        "label": "A(p).Key \u003c x",
+        "to_id": "update_l"
+      },
+      {
+        "direction": "forward",
+        "from_id": "compare_key",
+        "label": "x \u003c A(p).Key",
+        "to_id": "update_r"
+      },
+      {
+        "direction": "forward",
+        "from_id": "compare_key",
+        "label": "x = A(p).Key",
+        "to_id": "exit_found"
+      },
+      {
+        "direction": "forward",
+        "from_id": "update_l",
+        "label": "",
+        "to_id": "probe"
+      },
+      {
+        "direction": "forward",
+        "from_id": "update_r",
+        "label": "",
+        "to_id": "probe"
+      }
+    ],
+    "nodes": [
+      {
+        "box_2d": [
+          19,
+          149,
+          120,
+          750
+        ],
+        "id": "binary_search_description",
+        "kind": "other",
+        "label": "Binary Search Description",
+        "text": "Binary Search\nGiven: array A with attribute Key,\nelements 1 to N ordered on the values of Key\nso that A(1).Key ≤ A(2).Key ≤ ... ≤ A(N).Key\nFind index p such that A(p).Key = x."
+      },
+      {
+        "box_2d": [
+          216,
+          326,
+          299,
+          616
+        ],
+        "id": "set_bounds",
+        "kind": "start",
+        "label": "Set bounds",
+        "text": "Set bounds:\nL:=0\nR:=N + 1"
+      },
+      {
+        "box_2d": [
+          395,
+          411,
+          454,
+          572
+        ],
+        "id": "probe",
+        "kind": "process",
+        "label": "Probe",
+        "text": "Probe:\np:=(R - L)/2"
+      },
+      {
+        "box_2d": [
+          510,
+          367,
+          590,
+          616
+        ],
+        "id": "search_exhausted",
+        "kind": "decision",
+        "label": "Search exhausted?",
+        "text": "Search\nexhausted\n?"
+      },
+      {
+        "box_2d": [
+          534,
+          716,
+          590,
+          891
+        ],
+        "id": "exit_not_found",
+        "kind": "end",
+        "label": "Exit: \"Not found\"",
+        "text": "Exit:\n\"Not found\""
+      },
+      {
+        "box_2d": [
+          672,
+          411,
+          702,
+          572
+        ],
+        "id": "update_p",
+        "kind": "process",
+        "label": "p:=L + p",
+        "text": "p:=L + p"
+      },
+      {
+        "box_2d": [
+          757,
+          367,
+          837,
+          616
+        ],
+        "id": "compare_key",
+        "kind": "decision",
+        "label": "Compare A(p).Key to x",
+        "text": "Compare\nA(p).Key to x"
+      },
+      {
+        "box_2d": [
+          800,
+          99,
+          829,
+          180
+        ],
+        "id": "update_l",
+        "kind": "process",
+        "label": "L:=p",
+        "text": "L:=p"
+      },
+      {
+        "box_2d": [
+          800,
+          802,
+          829,
+          891
+        ],
+        "id": "update_r",
+        "kind": "process",
+        "label": "R:=p",
+        "text": "R:=p"
+      },
+      {
+        "box_2d": [
+          935,
+          411,
+          991,
+          572
+        ],
+        "id": "exit_found",
+        "kind": "end",
+        "label": "Exit: Found at p",
+        "text": "Exit:\nFound at p"
+      }
+    ],
+    "summary": "This flowchart illustrates the binary search algorithm. The process begins by initializing the search bounds, L and R. It then enters a loop, repeatedly calculating a probe index 'p' to check against the target value 'x'. Based on the comparison, the search space is halved by updating either the left or right bound, and the process loops back to calculate a new probe. The algorithm terminates either when the target value is found or when the search space is exhausted, indicating the value is not in the array."
+  },
+  "summary": "This flowchart illustrates the binary search algorithm. The process begins by initializing the search bounds, L and R. It then enters a loop, repeatedly calculating a probe index 'p' to check against the target value 'x'. Based on the comparison, the search space is halved by updating either the left or right bound, and the process loops back to calculate a new probe. The algorithm terminates either when the target value is found or when the search space is exhausted, indicating the value is not in the array.",
+  "thoughts_tokens": 100,
+  "total_tokens": 2375
+}

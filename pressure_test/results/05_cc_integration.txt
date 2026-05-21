@@ -1,0 +1,25 @@
+=== Pressure test 5: CC integration smoke ===
+
+(a) SessionStart hook emits routing instructions
+  PASS  routing fence present in SessionStart additionalContext
+(b) bmg doctor — all 5 axes green
+      bmg doctor
+      ==========
+        ✓ API key:      resolved from config:/home/gas6amus/.config/bmg/api_key (len=39)
+        ✓ Cache dir:    /run/user/1000/bmg (4 entries, 12.0 KiB)
+        ✓ Hook install: /home/gas6amus/Documents/be-my-geminis/.claude/settings.json
+            ✓ PreToolUse:Read → /home/gas6amus/.local/bin/bmg hook pre-read [executable]
+            ✓ SessionStart: → /home/gas6amus/.local/bin/bmg hook session-start [executable]
+        ✓ MCP server:   /home/gas6amus/.claude.json — /home/gas6amus/.local/bin/bmg mcp
+        ✓ Gemini:       reachable (693ms, model=gemini-2.5-flash)
+      
+      All checks passed. bmg is ready.
+  PASS  doctor: 7 ✓ axes + final 'All checks passed'
+(c) hook registered in ~/.claude/settings.json (or project)
+  PASS  PreToolUse:Read hook entry found
+(d) MCP server registered in ~/.claude.json
+  PASS  mcpServers.bemygeminis present in ~/.claude.json
+(e) CC has spawned bmg mcp (evidence: ~/.cache/claude-cli-nodejs/.../mcp-logs-bemygeminis/)
+  PASS  CC mcp-logs dir exists: /home/gas6amus/.cache/claude-cli-nodejs/-home-gas6amus-Documents-be-my-geminis/mcp-logs-bemygeminis
+
+=== summary: 5 pass, 0 fail ===

@@ -1,0 +1,378 @@
+{
+  "elements": [
+    {
+      "box_2d": [
+        36,
+        68,
+        63,
+        979
+      ],
+      "label": "browser_address_bar",
+      "kind": "",
+      "text": "https://app.example.com/dashboard"
+    },
+    {
+      "box_2d": [
+        120,
+        39,
+        153,
+        386
+      ],
+      "label": "page_title",
+      "kind": "",
+      "text": "Acme Dashboard"
+    },
+    {
+      "box_2d": [
+        125,
+        791,
+        148,
+        959
+      ],
+      "label": "user_email",
+      "kind": "",
+      "text": "user@example.com"
+    },
+    {
+      "box_2d": [
+        235,
+        24,
+        260,
+        106
+      ],
+      "label": "overview_link",
+      "kind": "",
+      "text": "Overview"
+    },
+    {
+      "box_2d": [
+        285,
+        24,
+        310,
+        95
+      ],
+      "label": "reports_link",
+      "kind": "",
+      "text": "Reports"
+    },
+    {
+      "box_2d": [
+        335,
+        24,
+        360,
+        99
+      ],
+      "label": "settings_link",
+      "kind": "",
+      "text": "Settings"
+    },
+    {
+      "box_2d": [
+        385,
+        24,
+        410,
+        66
+      ],
+      "label": "help_link",
+      "kind": "",
+      "text": "Help"
+    },
+    {
+      "box_2d": [
+        229,
+        233,
+        334,
+        976
+      ],
+      "label": "error_banner",
+      "kind": "",
+      "text": "Session expired\nPlease sign in again to continue."
+    },
+    {
+      "box_2d": [
+        266,
+        254,
+        296,
+        459
+      ],
+      "label": "error_message_title",
+      "kind": "",
+      "text": "Session expired"
+    },
+    {
+      "box_2d": [
+        299,
+        254,
+        319,
+        558
+      ],
+      "label": "error_message_body",
+      "kind": "",
+      "text": "Please sign in again to continue."
+    },
+    {
+      "box_2d": [
+        266,
+        941,
+        296,
+        956
+      ],
+      "label": "close_error_button",
+      "kind": "",
+      "text": "x"
+    },
+    {
+      "box_2d": [
+        360,
+        233,
+        485,
+        976
+      ],
+      "label": "recent_activity_container",
+      "kind": "",
+      "text": "Recent activity"
+    },
+    {
+      "box_2d": [
+        415,
+        254,
+        438,
+        380
+      ],
+      "label": "recent_activity_text",
+      "kind": "",
+      "text": "Recent activity"
+    },
+    {
+      "box_2d": [
+        515,
+        233,
+        675,
+        976
+      ],
+      "label": "reports_loading_container",
+      "kind": "",
+      "text": "Reports loading..."
+    },
+    {
+      "box_2d": [
+        570,
+        254,
+        593,
+        414
+      ],
+      "label": "reports_loading_text",
+      "kind": "",
+      "text": "Reports loading..."
+    }
+  ],
+  "latency_ms": 12266,
+  "model": "gemini-2.5-pro",
+  "profile": "screenshot",
+  "prompt_tokens": 695,
+  "structured": {
+    "elements": [
+      {
+        "box_2d": [
+          36,
+          68,
+          63,
+          979
+        ],
+        "is_interactive": true,
+        "label": "browser_address_bar",
+        "role": "container",
+        "state": "filled",
+        "text": "https://app.example.com/dashboard"
+      },
+      {
+        "box_2d": [
+          120,
+          39,
+          153,
+          386
+        ],
+        "is_interactive": false,
+        "label": "page_title",
+        "role": "heading",
+        "state": "unknown",
+        "text": "Acme Dashboard"
+      },
+      {
+        "box_2d": [
+          125,
+          791,
+          148,
+          959
+        ],
+        "is_interactive": false,
+        "label": "user_email",
+        "role": "text",
+        "state": "unknown",
+        "text": "user@example.com"
+      },
+      {
+        "box_2d": [
+          235,
+          24,
+          260,
+          106
+        ],
+        "is_interactive": true,
+        "label": "overview_link",
+        "role": "link",
+        "state": "enabled",
+        "text": "Overview"
+      },
+      {
+        "box_2d": [
+          285,
+          24,
+          310,
+          95
+        ],
+        "is_interactive": true,
+        "label": "reports_link",
+        "role": "link",
+        "state": "enabled",
+        "text": "Reports"
+      },
+      {
+        "box_2d": [
+          335,
+          24,
+          360,
+          99
+        ],
+        "is_interactive": true,
+        "label": "settings_link",
+        "role": "link",
+        "state": "enabled",
+        "text": "Settings"
+      },
+      {
+        "box_2d": [
+          385,
+          24,
+          410,
+          66
+        ],
+        "is_interactive": true,
+        "label": "help_link",
+        "role": "link",
+        "state": "enabled",
+        "text": "Help"
+      },
+      {
+        "box_2d": [
+          229,
+          233,
+          334,
+          976
+        ],
+        "is_interactive": false,
+        "label": "error_banner",
+        "role": "container",
+        "state": "active",
+        "text": "Session expired\nPlease sign in again to continue."
+      },
+      {
+        "box_2d": [
+          266,
+          254,
+          296,
+          459
+        ],
+        "is_interactive": false,
+        "label": "error_message_title",
+        "role": "heading",
+        "state": "unknown",
+        "text": "Session expired"
+      },
+      {
+        "box_2d": [
+          299,
+          254,
+          319,
+          558
+        ],
+        "is_interactive": false,
+        "label": "error_message_body",
+        "role": "text",
+        "state": "unknown",
+        "text": "Please sign in again to continue."
+      },
+      {
+        "box_2d": [
+          266,
+          941,
+          296,
+          956
+        ],
+        "is_interactive": true,
+        "label": "close_error_button",
+        "role": "button",
+        "state": "enabled",
+        "text": "x"
+      },
+      {
+        "box_2d": [
+          360,
+          233,
+          485,
+          976
+        ],
+        "is_interactive": false,
+        "label": "recent_activity_container",
+        "role": "container",
+        "state": "unknown",
+        "text": "Recent activity"
+      },
+      {
+        "box_2d": [
+          415,
+          254,
+          438,
+          380
+        ],
+        "is_interactive": false,
+        "label": "recent_activity_text",
+        "role": "text",
+        "state": "unknown",
+        "text": "Recent activity"
+      },
+      {
+        "box_2d": [
+          515,
+          233,
+          675,
+          976
+        ],
+        "is_interactive": false,
+        "label": "reports_loading_container",
+        "role": "container",
+        "state": "unknown",
+        "text": "Reports loading..."
+      },
+      {
+        "box_2d": [
+          570,
+          254,
+          593,
+          414
+        ],
+        "is_interactive": false,
+        "label": "reports_loading_text",
+        "role": "text",
+        "state": "unknown",
+        "text": "Reports loading..."
+      }
+    ],
+    "focused_element_label": "error_banner",
+    "screen_title": "Acme Dashboard",
+    "summary": "The user is on the Acme Dashboard page, but their session has expired. A prominent red error banner at the top of the main content area displays the message \"Session expired\" and instructs the user to \"Please sign in again to continue.\". The rest of the dashboard content, such as 'Recent activity' and 'Reports', appears to be in a loading or inactive state."
+  },
+  "summary": "The user is on the Acme Dashboard page, but their session has expired. A prominent red error banner at the top of the main content area displays the message \"Session expired\" and instructs the user to \"Please sign in again to continue.\". The rest of the dashboard content, such as 'Recent activity' and 'Reports', appears to be in a loading or inactive state.",
+  "thoughts_tokens": 81,
+  "total_tokens": 2073
+}

@@ -1,0 +1,54 @@
+{
+  "schema_version": 1,
+  "purpose": "Tools that return inline image bytes bypass the bmg PreToolUse:Read hook. This file is consumed by the bmg deny-inline PreToolUse hook (Phase 5) to block such tools so every image flows through a filesystem path and is intercepted by the Read hook. User-editable at ~/.config/bmg/deny_inline.json.",
+  "verified_against": {
+    "mcp_server": "claude-in-chrome",
+    "schemas_inspected_on": "2026-05-04",
+    "claude_code_version": "2.1.126",
+    "method": "ToolSearch select: of every mcp__claude-in-chrome__* tool, classified by return shape from the schema description"
+  },
+  "tools": [
+    {
+      "name": "mcp__claude-in-chrome__computer",
+      "decision": "deny_when",
+      "deny_when": {"action": ["screenshot", "zoom"]},
+      "reason": "screenshot/zoom actions return inline image bytes",
+      "safe_alternative": "set save_to_disk=true so the screenshot lands on disk; the next Read of that path is intercepted by the bmg hook. Or use gif_creator (always writes a file)."
+    },
+    {
+      "name": "mcp__claude-in-chrome__browser_batch",
+      "decision": "deny_when",
+      "deny_when": {"contains_action": ["computer.screenshot", "computer.zoom"]},
+      "reason": "tool description: 'Screenshots and other images are returned interleaved with outputs'",
+      "safe_alternative": "split the batch: run the screenshot/zoom via computer with save_to_disk=true outside the batch; pass the path into subsequent calls."
+    },
+    {
+      "name": "mcp__claude-in-chrome__javascript_tool",
+      "decision": "watch",
+      "reason": "returns the last expression value; could in principle return a data:image/ string or other base64 image payload",
+      "runtime_check": "if the returned value matches /^data:image\\//i or begins with PNG/JPEG magic bytes, surface a warning"
+    },
+    {"name": "mcp__claude-in-chrome__gif_creator", "decision": "allow", "reason": "export downloads a file; no inline image bytes returned to agent context"},
+    {"name": "mcp__claude-in-chrome__read_page", "decision": "allow", "reason": "accessibility tree, text only"},
+    {"name": "mcp__claude-in-chrome__read_console_messages", "decision": "allow", "reason": "text only"},
+    {"name": "mcp__claude-in-chrome__read_network_requests", "decision": "allow", "reason": "text/JSON; image responses are summarized as URL+headers"},
+    {"name": "mcp__claude-in-chrome__get_page_text", "decision": "allow", "reason": "plain text extract"},
+    {"name": "mcp__claude-in-chrome__find", "decision": "allow", "reason": "element description text"},
+    {"name": "mcp__claude-in-chrome__navigate", "decision": "allow", "reason": "navigation status text"},
+    {"name": "mcp__claude-in-chrome__tabs_context_mcp", "decision": "allow"},
+    {"name": "mcp__claude-in-chrome__tabs_create_mcp", "decision": "allow"},
+    {"name": "mcp__claude-in-chrome__tabs_close_mcp", "decision": "allow"},
+    {"name": "mcp__claude-in-chrome__switch_browser", "decision": "allow"},
+    {"name": "mcp__claude-in-chrome__resize_window", "decision": "allow"},
+    {"name": "mcp__claude-in-chrome__form_input", "decision": "allow"},
+    {"name": "mcp__claude-in-chrome__file_upload", "decision": "allow", "reason": "uploads files FROM disk to the page"},
+    {"name": "mcp__claude-in-chrome__upload_image", "decision": "allow", "reason": "uploads previously captured imageId; no new bytes produced"},
+    {"name": "mcp__claude-in-chrome__shortcuts_execute", "decision": "allow"},
+    {"name": "mcp__claude-in-chrome__shortcuts_list", "decision": "allow"}
+  ],
+  "decision_categories": {
+    "deny_when": "block the tool call when the predicate matches; return a deny with a clear message pointing to the safe_alternative",
+    "watch": "allow the call but inspect the result; warn (do not block) if the runtime_check matches",
+    "allow": "no action needed; tool does not return inline image bytes"
+  }
+}

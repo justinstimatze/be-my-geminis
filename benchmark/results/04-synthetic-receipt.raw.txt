@@ -1,0 +1,4 @@
+Based on the receipt from The Corner Cafe:
+
+- **Total amount paid:** $38.45
+- **Number of distinct items ordered:** 4 (Avocado Toast, Black Coffee, Side Salad, and Cheesecake)

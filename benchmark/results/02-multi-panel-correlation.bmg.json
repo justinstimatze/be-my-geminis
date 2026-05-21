@@ -1,0 +1,214 @@
+{
+  "elements": [
+    {
+      "box_2d": [
+        31,
+        209,
+        58,
+        790
+      ],
+      "label": "main_title",
+      "kind": "text",
+      "text": "Scatter comparison across four panels"
+    },
+    {
+      "box_2d": [
+        71,
+        19,
+        516,
+        493
+      ],
+      "label": "scatter_plot_panel_A",
+      "kind": "container",
+      "text": ""
+    },
+    {
+      "box_2d": [
+        71,
+        507,
+        516,
+        982
+      ],
+      "label": "scatter_plot_panel_B",
+      "kind": "container",
+      "text": ""
+    },
+    {
+      "box_2d": [
+        559,
+        19,
+        1000,
+        493
+      ],
+      "label": "scatter_plot_panel_C",
+      "kind": "container",
+      "text": ""
+    },
+    {
+      "box_2d": [
+        559,
+        507,
+        1000,
+        982
+      ],
+      "label": "scatter_plot_panel_D",
+      "kind": "container",
+      "text": ""
+    },
+    {
+      "box_2d": [
+        71,
+        209,
+        98,
+        360
+      ],
+      "label": "panel_A_title",
+      "kind": "text",
+      "text": "Panel A"
+    },
+    {
+      "box_2d": [
+        71,
+        699,
+        98,
+        850
+      ],
+      "label": "panel_B_title",
+      "kind": "text",
+      "text": "Panel B"
+    },
+    {
+      "box_2d": [
+        531,
+        209,
+        558,
+        360
+      ],
+      "label": "panel_C_title",
+      "kind": "text",
+      "text": "Panel C"
+    },
+    {
+      "box_2d": [
+        531,
+        699,
+        558,
+        850
+      ],
+      "label": "panel_D_title",
+      "kind": "text",
+      "text": "Panel D"
+    }
+  ],
+  "latency_ms": 6997,
+  "model": "gemini-2.5-pro",
+  "profile": "general",
+  "prompt_tokens": 570,
+  "structured": {
+    "elements": [
+      {
+        "box_2d": [
+          31,
+          209,
+          58,
+          790
+        ],
+        "kind": "text",
+        "label": "main_title",
+        "text": "Scatter comparison across four panels"
+      },
+      {
+        "box_2d": [
+          71,
+          19,
+          516,
+          493
+        ],
+        "kind": "container",
+        "label": "scatter_plot_panel_A",
+        "text": ""
+      },
+      {
+        "box_2d": [
+          71,
+          507,
+          516,
+          982
+        ],
+        "kind": "container",
+        "label": "scatter_plot_panel_B",
+        "text": ""
+      },
+      {
+        "box_2d": [
+          559,
+          19,
+          1000,
+          493
+        ],
+        "kind": "container",
+        "label": "scatter_plot_panel_C",
+        "text": ""
+      },
+      {
+        "box_2d": [
+          559,
+          507,
+          1000,
+          982
+        ],
+        "kind": "container",
+        "label": "scatter_plot_panel_D",
+        "text": ""
+      },
+      {
+        "box_2d": [
+          71,
+          209,
+          98,
+          360
+        ],
+        "kind": "text",
+        "label": "panel_A_title",
+        "text": "Panel A"
+      },
+      {
+        "box_2d": [
+          71,
+          699,
+          98,
+          850
+        ],
+        "kind": "text",
+        "label": "panel_B_title",
+        "text": "Panel B"
+      },
+      {
+        "box_2d": [
+          531,
+          209,
+          558,
+          360
+        ],
+        "kind": "text",
+        "label": "panel_C_title",
+        "text": "Panel C"
+      },
+      {
+        "box_2d": [
+          531,
+          699,
+          558,
+          850
+        ],
+        "kind": "text",
+        "label": "panel_D_title",
+        "text": "Panel D"
+      }
+    ],
+    "summary": "The image displays a 2x2 grid of four scatter plots under the main title \"Scatter comparison across four panels\". The individual plots are labeled \"Panel A\", \"Panel B\", \"Panel C\", and \"Panel D\". Panel C exhibits a strong positive linear correlation, with data points tightly clustered around an upward-sloping line. In contrast, Panels A, B, and D show clouds of points with no obvious linear trend, suggesting weak or no correlation between the variables."
+  },
+  "summary": "The image displays a 2x2 grid of four scatter plots under the main title \"Scatter comparison across four panels\". The individual plots are labeled \"Panel A\", \"Panel B\", \"Panel C\", and \"Panel D\". Panel C exhibits a strong positive linear correlation, with data points tightly clustered around an upward-sloping line. In contrast, Panels A, B, and D show clouds of points with no obvious linear trend, suggesting weak or no correlation between the variables.",
+  "thoughts_tokens": 93,
+  "total_tokens": 1334
+}

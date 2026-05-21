@@ -1,0 +1,1 @@
+This flowchart describes a payment processing workflow. The process begins by fetching and validating a payment. Successful validations lead to transformation and approval, ending the process. Failed validations result in rejection, which can either lead to a retry or an audit, with the audit potentially ending in a dead-letter queue.

@@ -1,0 +1,34 @@
+=== Pressure test 2: install/uninstall round-trip ===
+tmp HOME: /tmp/bmg-pressure.UnkBnC
+
+(1) bmg init --project --enable-mcp
+      bmg init (binary: /home/gas6amus/.local/bin/bmg)
+        hooks target:  /tmp/bmg-pressure.UnkBnC/.claude/settings.json
+        settings.json: bmg PreToolUse:Read + SessionStart hooks installed
+        hooks backup:  /tmp/bmg-pressure.UnkBnC/.claude/settings.json.bmg-backup-20260519-175515
+        MCP target:    /tmp/bmg-pressure.UnkBnC/.claude.json
+        .claude.json:  bemygeminis MCP server registered
+        MCP backup:    /tmp/bmg-pressure.UnkBnC/.claude.json.bmg-backup-20260519-175515
+      
+      Restart Claude Code so the hook and MCP registration are loaded
+      (both files are snapshot at session start; not hot-reloaded).
+  PASS  foreign SessionStart hook (hindcast) preserved
+  PASS  foreign PostToolUse hook (defn-sync) preserved
+  PASS  bmg PreToolUse:Read hook registered
+  PASS  bemygeminis MCP entry written to ~/.claude.json
+  PASS  foreign MCP servers (buddy, plancheck) preserved
+  PASS  Claude-managed top-level keys (projects, firstStartTime) preserved
+
+(2) bmg init --project --enable-mcp (idempotency check)
+  PASS  second init is a no-op
+
+(3) bmg uninstall --project
+      bmg uninstall
+        hooks target: /tmp/bmg-pressure.UnkBnC/.claude/settings.json
+        settings.json: bmg hooks removed
+        MCP target:   /tmp/bmg-pressure.UnkBnC/.claude.json
+        .claude.json: bemygeminis MCP server removed
+  PASS  settings.json round-trip identical to pre-install
+  PASS  ~/.claude.json round-trip identical to pre-install
+
+=== summary: 9 pass, 0 fail ===

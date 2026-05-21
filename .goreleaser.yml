@@ -1,0 +1,63 @@
+# goreleaser config. Triggered on tag push (v*) by .github/workflows/release.yml.
+# Local dry-run: `goreleaser release --snapshot --clean`.
+version: 2
+
+project_name: bmg
+
+before:
+  hooks:
+    - go mod tidy
+
+builds:
+  - id: bmg
+    main: ./cmd/bmg
+    binary: bmg
+    env:
+      - CGO_ENABLED=0
+    goos:
+      - linux
+      - darwin
+    goarch:
+      - amd64
+      - arm64
+    flags:
+      - -trimpath
+    ldflags:
+      # -s -w strips symbol + DWARF tables (~20-30% size reduction).
+      # main.version injection — see comment on `var version` in cmd/bmg/main.go.
+      - -s -w -X main.version=v{{.Version}}
+
+archives:
+  - id: default
+    name_template: "{{ .ProjectName }}_{{ .Version }}_{{ .Os }}_{{ .Arch }}"
+    formats: [tar.gz]
+    files:
+      - LICENSE
+      - README.md
+      - CHANGELOG.md
+      - SECURITY.md
+
+checksum:
+  name_template: "checksums.txt"
+  algorithm: sha256
+
+snapshot:
+  version_template: "{{ incpatch .Version }}-next"
+
+changelog:
+  # Use GitHub-native release notes generation (PR titles since previous tag).
+  # CHANGELOG.md remains the canonical curated record; this is for the GH UI.
+  use: github-native
+  sort: asc
+
+release:
+  github:
+    owner: justinstimatze
+    name: be-my-geminis
+  draft: false
+  prerelease: auto
+  # Header pinned to the release page; CHANGELOG.md has the full record.
+  header: |
+    See [CHANGELOG.md](https://github.com/justinstimatze/be-my-geminis/blob/main/CHANGELOG.md#unreleased) for the curated change log.
+
+    Install via the one-liner in [README.md](https://github.com/justinstimatze/be-my-geminis#install), or download a binary below + drop it on `$PATH`.

@@ -1,0 +1,68 @@
+{
+  "elements": null,
+  "latency_ms": 6125,
+  "model": "gemini-2.5-pro",
+  "profile": "chart",
+  "prompt_tokens": 757,
+  "structured": {
+    "axes": [
+      {
+        "label": "$ millions",
+        "orientation": "y",
+        "range_text": "0-50",
+        "unit": "$ millions"
+      },
+      {
+        "label": "",
+        "orientation": "x",
+        "range_text": "Q1, Q2, Q3, Q4",
+        "unit": ""
+      }
+    ],
+    "chart_type": "bar",
+    "key_observations": [
+      "The highest revenue was recorded in Q1 at $42 million.",
+      "The lowest revenue occurred in Q3, with a value of $7 million.",
+      "Revenue decreased from Q1 to Q3, then increased in Q4.",
+      "The revenue in Q2 was $18 million.",
+      "The revenue in Q4 was $23 million."
+    ],
+    "series": [
+      {
+        "color": "blue",
+        "name": "Revenue",
+        "notable_values": [
+          {
+            "label": "Q1",
+            "value": "42"
+          },
+          {
+            "label": "Q2",
+            "value": "18"
+          },
+          {
+            "label": "Q4",
+            "value": "23"
+          }
+        ],
+        "trend": "volatile"
+      },
+      {
+        "color": "red",
+        "name": "Revenue (Q3)",
+        "notable_values": [
+          {
+            "label": "Q3",
+            "value": "7"
+          }
+        ],
+        "trend": "unknown"
+      }
+    ],
+    "summary": "This bar chart displays the quarterly revenue in millions of dollars for the year 2026. The revenue fluctuates significantly throughout the year, starting at a high of $42 million in Q1, dropping to its lowest point of $7 million in Q3, and then recovering to $23 million in Q4. The third quarter is distinctly lower than the others and is highlighted in a different color.",
+    "title": "Quarterly Revenue 2026 ($M)"
+  },
+  "summary": "This bar chart displays the quarterly revenue in millions of dollars for the year 2026. The revenue fluctuates significantly throughout the year, starting at a high of $42 million in Q1, dropping to its lowest point of $7 million in Q3, and then recovering to $23 million in Q4. The third quarter is distinctly lower than the others and is highlighted in a different color.",
+  "thoughts_tokens": 95,
+  "total_tokens": 1353
+}

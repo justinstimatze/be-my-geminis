@@ -1,0 +1,103 @@
+{
+  "elements": null,
+  "latency_ms": 6760,
+  "model": "gemini-2.5-pro",
+  "profile": "document",
+  "prompt_tokens": 747,
+  "structured": {
+    "doc_type": "receipt",
+    "headings": [
+      {
+        "box_2d": [
+          33,
+          310,
+          57,
+          678
+        ],
+        "level": 1,
+        "text": "The Corner Cafe"
+      }
+    ],
+    "key_facts": [
+      "Total: $38.45",
+      "Line Items Count: 4",
+      "Vendor: The Corner Cafe",
+      "Date: 2026-05-19",
+      "Subtotal: $34.00",
+      "Tax: $2.72",
+      "Tip: $1.73"
+    ],
+    "paragraphs": [
+      {
+        "box_2d": [
+          74,
+          322,
+          89,
+          677
+        ],
+        "text": "123 Main St · Receipt #4081"
+      },
+      {
+        "box_2d": [
+          100,
+          406,
+          115,
+          593
+        ],
+        "text": "2026-05-19 18:42"
+      },
+      {
+        "box_2d": [
+          522,
+          429,
+          537,
+          569
+        ],
+        "text": "Thank you!"
+      }
+    ],
+    "summary": "This document is a receipt from The Corner Cafe, dated May 19, 2026. It lists four purchased items: Avocado Toast, Black Coffee, Side Salad, and Cheesecake. The subtotal for these items is $34.00, with an added 8% tax and a tip, bringing the final total to $38.45.",
+    "tables": [
+      {
+        "caption": "",
+        "rows": [
+          [
+            "Avocado Toast",
+            "$12.50"
+          ],
+          [
+            "Black Coffee",
+            "$4.25"
+          ],
+          [
+            "Side Salad",
+            "$9.75"
+          ],
+          [
+            "Cheesecake",
+            "$7.50"
+          ],
+          [
+            "Subtotal",
+            "$34.00"
+          ],
+          [
+            "Tax (8%)",
+            "$2.72"
+          ],
+          [
+            "Tip",
+            "$1.73"
+          ],
+          [
+            "TOTAL",
+            "$38.45"
+          ]
+        ]
+      }
+    ]
+  },
+  "summary": "This document is a receipt from The Corner Cafe, dated May 19, 2026. It lists four purchased items: Avocado Toast, Black Coffee, Side Salad, and Cheesecake. The subtotal for these items is $34.00, with an added 8% tax and a tip, bringing the final total to $38.45.",
+  "thoughts_tokens": 66,
+  "total_tokens": 1445
+}

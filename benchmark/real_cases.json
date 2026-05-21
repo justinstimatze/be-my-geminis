@@ -1,0 +1,53 @@
+{
+  "_comment": "Real-world counterpart to cases.json. Four references, all public domain or CC0. Each entry mirrors cases.json's shape but adds 'source_url' and 'license' fields for the public-repo provenance trail. See benchmark/real_images/README.md for selection rationale.",
+  "cases": [
+    {
+      "id": "real-01-epa-degree-days",
+      "category": "chart-value",
+      "profile": "chart",
+      "image": "real_images/01-epa-degree-days.png",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Heating_and_Cooling_Degree_Days_in_the_Contiguous_48_States,_1895%E2%80%932023.png",
+      "license": "Public domain (US federal work, 17 USC § 105)",
+      "question": "This is the EPA's heating-vs-cooling degree-days chart for the contiguous 48 states. Read the chart: identify both series, give the approximate range of values on the y-axis, name the period covered by the x-axis, and call out any visible trend over the last few decades.",
+      "intent": "extract the chart title, both series labels, axis ranges, and the dominant trend; identify any visible step changes or inflection points",
+      "expected_keywords": ["heating", "cooling", "degree days", "1895", "2023"],
+      "what_it_tests": "Real-world line chart from a government dataset — EPA-styled rendering vs. synthetic matplotlib. Tests the chart profile's series/axes extraction on production-quality chart imagery."
+    },
+    {
+      "id": "real-02-gimp-screenshot",
+      "category": "ui-element",
+      "profile": "screenshot",
+      "image": "real_images/02-gimp-screenshot.png",
+      "source_url": "https://commons.wikimedia.org/wiki/File:GIMP_-_2.10.34.png",
+      "license": "CC0 1.0 (uploader-dedicated PD); GIMP UI itself is GPL",
+      "question": "This is a screenshot of GIMP 2.10 running on Linux. List the top-bar menu items visible left-to-right, identify which tool appears selected in the left-hand toolbox, and describe the docked panels visible on the right side of the window.",
+      "intent": "enumerate top-bar menus by exact label, identify the currently-active tool in the toolbox by visual highlight, and list docked panels with their tab labels",
+      "expected_keywords": ["File", "Edit", "Select", "View", "Image", "Layer", "Tools", "Filters", "Windows", "Help"],
+      "what_it_tests": "Real desktop application UI on real OS chrome (Xfce 4.18, Debian 12) — vs. the matplotlib mock-UI in synthetic case 05. Tests the screenshot profile against actual anti-aliased text, real menu rendering, and a full-resolution non-synthesized application window."
+    },
+    {
+      "id": "real-03-notld-frame",
+      "category": "real-photo",
+      "profile": "general",
+      "image": "real_images/03-notld-ben.jpg",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Duane_Jones_as_Ben_in_Night_of_the_Living_Dead_bw.jpg",
+      "license": "Public domain US (1968 film released without copyright notice; see source page for legal basis)",
+      "question": "This is a still from a black-and-white 1968 horror film. Describe the composition: where is the central figure positioned, what is the lighting direction and contrast like, what props or set elements are visible, and what does the framing suggest about the camera angle?",
+      "intent": "describe the frame as a 3D artist would need it to recreate the look in a simulation: subject position, lighting direction + hardness, set elements with their relative positions, B&W contrast range, camera angle and focal length feel",
+      "expected_keywords": ["man", "interior", "low-key", "black", "white"],
+      "what_it_tests": "Real photographic content with film grain, real JPEG compression, B&W cinematography — vs. all-synthetic cases. Tests the general profile on the kind of reference-frame input the lucida-style use case actually produces (visual recreation for 3D simulation)."
+    },
+    {
+      "id": "real-04-binarysearch-flowchart",
+      "category": "diagram-structure",
+      "profile": "diagram",
+      "image": "real_images/04-binarysearch-flowchart.png",
+      "source_url": "https://commons.wikimedia.org/wiki/File:BinarySearch.Flowchart.png",
+      "license": "Public domain (author-released for any purpose without conditions)",
+      "question": "This is a flowchart of the binary search algorithm. Return the diagram as a JSON object: nodes with id + kind (start, decision, process, end), and directed edges with from, to, and label (the arrow text — typically yes/no for decisions). Include every node and every edge visible.",
+      "intent": "extract the complete flowchart structure: every node with its kind classification, every directed edge with its label (yes/no for decision branches), and the loop-back edge that distinguishes a binary-search algorithm from a straight pipeline",
+      "expected_keywords": ["start", "end", "yes", "no"],
+      "what_it_tests": "Real-world algorithm flowchart with the canonical four node kinds (start, decision, process, end) and labeled yes/no edges. Hand-drawn-looking (vs. matplotlib-clean synthetic case 09), tests the diagram profile's ability to extract structure from real-world flowchart conventions rather than synthetic graph-rendered images."
+    }
+  ]
+}

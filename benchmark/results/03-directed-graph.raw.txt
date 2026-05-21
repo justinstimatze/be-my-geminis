@@ -1,0 +1,3 @@
+The shortest directed path from **start** to **end** is:
+
+**start → validate → approve → end**

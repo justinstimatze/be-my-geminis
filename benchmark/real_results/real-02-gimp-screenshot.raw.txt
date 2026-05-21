@@ -1,0 +1,36 @@
+# GIMP 2.10 Screenshot Analysis
+
+## Top-Bar Menu Items (left to right)
+1. **Archivo** (File)
+2. **Editar** (Edit)
+3. **Seleccionar** (Select)
+4. **Vista** (View)
+5. **Imagen** (Image)
+6. **Capa** (Layer)
+7. **Colores** (Colors)
+8. **Herramientas** (Tools)
+9. **Filtros** (Filters)
+10. **Ventanas** (Windows)
+11. **Ayuda** (Help)
+
+## Selected Tool in the Left Toolbox
+The selected tool appears to be **Umbral B/N** (Threshold), as indicated by the tool options panel below the toolbox which reads "Umbral B/N — Esta herramienta no tiene opciones" (This tool has no options). The threshold icon in the lower tool-options area (the half-black/half-white rectangle) is highlighted.
+
+## Docked Panels on the Right Side
+
+**Upper-right dock — Brushes panel:**
+- Tabs at the top for Brushes (paintbrush icon), Patterns, Fonts (Aa), and Help
+- A filter/search field labeled "filtro"
+- The currently selected brush: **"2. Hardness 050 (51 × 51)"**
+- A grid of brush thumbnails (hardness brushes, star, splatter shapes, etc.)
+- A dropdown labeled "Basic,"
+- A **Espaciado** (Spacing) slider set to **10.0**
+- A row of action buttons (edit, duplicate, delete, refresh, etc.)
+
+**Lower-right dock — Layers panel:**
+- Tabs for Layers, Channels, and Paths
+- **Modo** (Mode): Normal
+- **Opacidad** (Opacity): 100.0
+- **Bloquear** (Lock) options with pixel, position, and alpha lock toggles
+- A single layer entry named **"xfce.png"** (currently selected/highlighted in blue), with visibility (eye) icon enabled and a chain/link icon
+- A row of layer action buttons at the bottom (new layer, group, raise, lower, duplicate, anchor, delete)

@@ -1,0 +1,72 @@
+{
+  "elements": null,
+  "latency_ms": 7627,
+  "model": "gemini-2.5-pro",
+  "profile": "chart",
+  "prompt_tokens": 765,
+  "structured": {
+    "axes": [
+      {
+        "label": "Degree days",
+        "orientation": "y",
+        "range_text": "0 to 6,000",
+        "unit": ""
+      },
+      {
+        "label": "Year",
+        "orientation": "x",
+        "range_text": "1890 to 2030",
+        "unit": ""
+      }
+    ],
+    "chart_type": "line",
+    "key_observations": [
+      "Heating degree days show a long-term decreasing trend from 1895 to 2023.",
+      "Cooling degree days show a long-term increasing trend over the same period.",
+      "The number of heating degree days is consistently much higher than the number of cooling degree days throughout the entire time series.",
+      "Both series exhibit significant year-to-year volatility.",
+      "The decline in heating degree days appears more pronounced from approximately 1980 onwards."
+    ],
+    "series": [
+      {
+        "color": "blue",
+        "name": "Heating degree days (colder than 65°F)",
+        "notable_values": [
+          {
+            "label": "Start (1895)",
+            "value": "≈4,700"
+          },
+          {
+            "label": "Peak (around 1917)",
+            "value": "≈5,300"
+          },
+          {
+            "label": "End (2023)",
+            "value": "≈3,800"
+          }
+        ],
+        "trend": "falling"
+      },
+      {
+        "color": "red",
+        "name": "Cooling degree days (warmer than 65°F)",
+        "notable_values": [
+          {
+            "label": "Start (1895)",
+            "value": "≈1,200"
+          },
+          {
+            "label": "End (2023)",
+            "value": "≈1,500"
+          }
+        ],
+        "trend": "rising"
+      }
+    ],
+    "summary": "This line chart displays the annual heating and cooling degree days in the contiguous 48 United States from 1895 to 2023. It illustrates two opposing long-term trends over more than a century. The number of heating degree days, which represent colder conditions, shows a general decline, particularly in recent decades. Conversely, the number of cooling degree days, representing warmer conditions, exhibits a clear upward trend, indicating a rising need for cooling.",
+    "title": "Heating and Cooling Degree Days in the Contiguous 48 States, 1895–2023"
+  },
+  "summary": "This line chart displays the annual heating and cooling degree days in the contiguous 48 United States from 1895 to 2023. It illustrates two opposing long-term trends over more than a century. The number of heating degree days, which represent colder conditions, shows a general decline, particularly in recent decades. Conversely, the number of cooling degree days, representing warmer conditions, exhibits a clear upward trend, indicating a rising need for cooling.",
+  "thoughts_tokens": 107,
+  "total_tokens": 1513
+}

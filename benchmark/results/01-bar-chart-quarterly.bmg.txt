@@ -1,0 +1,1 @@
+This bar chart displays the quarterly revenue in millions of dollars for the year 2026. The revenue fluctuates significantly throughout the year, starting at a high of $42 million in Q1, dropping to its lowest point of $7 million in Q3, and then recovering to $23 million in Q4. The third quarter is distinctly lower than the others and is highlighted in a different color.

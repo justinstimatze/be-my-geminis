@@ -1,0 +1,63 @@
+{
+  "elements": null,
+  "latency_ms": 6847,
+  "model": "gemini-2.5-pro",
+  "profile": "chart",
+  "prompt_tokens": 800,
+  "structured": {
+    "axes": [
+      {
+        "label": "",
+        "orientation": "x",
+        "range_text": "c0-c9",
+        "unit": ""
+      },
+      {
+        "label": "",
+        "orientation": "y",
+        "range_text": "r0-r9",
+        "unit": ""
+      },
+      {
+        "label": "activation",
+        "orientation": "secondary_y",
+        "range_text": "0.0-1.0",
+        "unit": ""
+      }
+    ],
+    "chart_type": "heatmap",
+    "key_observations": [
+      "The cell at the intersection of row 'r5' and column 'c7' is dark purple.",
+      "According to the 'viridis' colorbar, dark purple corresponds to an activation value near the bottom of the scale, around 0.1.",
+      "The heatmap displays activation values on a grid from (r0, c0) to (r9, c9).",
+      "The color scale for activation ranges from 0.0 (dark purple) to 1.0 (bright yellow).",
+      "The highest activation values (bright yellow) appear at cells like (r0, c9), (r2, c1), and (r8, c2)."
+    ],
+    "series": [
+      {
+        "color": "viridis colormap (purple-blue-green-yellow)",
+        "name": "Activation Values",
+        "notable_values": [
+          {
+            "label": "Cell (r5, c7)",
+            "value": "≈0.1"
+          },
+          {
+            "label": "Highest activation cell (r0, c9)",
+            "value": "≈1.0"
+          },
+          {
+            "label": "Lowest activation cell (r5, c2)",
+            "value": "≈0.0"
+          }
+        ],
+        "trend": "unknown"
+      }
+    ],
+    "summary": "This chart is a 10x10 heatmap titled 'Activation heatmap (10x10)', displaying activation values for a grid of cells. The rows are labeled 'r0' through 'r9' and columns 'c0' through 'c9'. A colorbar on the right indicates that the activation values range from 0.0 (dark purple) to 1.0 (bright yellow). The specific cell at the intersection of row 'r5' and column 'c7' has a dark purple color, corresponding to a very low activation value, estimated to be approximately 0.1.",
+    "title": "Activation heatmap (10x10)"
+  },
+  "summary": "This chart is a 10x10 heatmap titled 'Activation heatmap (10x10)', displaying activation values for a grid of cells. The rows are labeled 'r0' through 'r9' and columns 'c0' through 'c9'. A colorbar on the right indicates that the activation values range from 0.0 (dark purple) to 1.0 (bright yellow). The specific cell at the intersection of row 'r5' and column 'c7' has a dark purple color, corresponding to a very low activation value, estimated to be approximately 0.1.",
+  "thoughts_tokens": 101,
+  "total_tokens": 1515
+}

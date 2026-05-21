@@ -1,0 +1,63 @@
+```json
+{
+  "nodes": [
+    {
+      "id": "start",
+      "kind": "start",
+      "text": "Set bounds: L:=0, R:=N+1"
+    },
+    {
+      "id": "probe",
+      "kind": "process",
+      "text": "Probe: p:=(R-L)/2"
+    },
+    {
+      "id": "exhausted",
+      "kind": "decision",
+      "text": "Search exhausted?"
+    },
+    {
+      "id": "notfound",
+      "kind": "end",
+      "text": "Exit: Not found"
+    },
+    {
+      "id": "addL",
+      "kind": "process",
+      "text": "p:=L+p"
+    },
+    {
+      "id": "compare",
+      "kind": "decision",
+      "text": "Compare A(p).Key to x"
+    },
+    {
+      "id": "setL",
+      "kind": "process",
+      "text": "L:=p"
+    },
+    {
+      "id": "setR",
+      "kind": "process",
+      "text": "R:=p"
+    },
+    {
+      "id": "found",
+      "kind": "end",
+      "text": "Exit: Found at p"
+    }
+  ],
+  "edges": [
+    { "from": "start", "to": "probe", "label": "" },
+    { "from": "probe", "to": "exhausted", "label": "" },
+    { "from": "exhausted", "to": "notfound", "label": "p = 0" },
+    { "from": "exhausted", "to": "addL", "label": "p > 0" },
+    { "from": "addL", "to": "compare", "label": "" },
+    { "from": "compare", "to": "setL", "label": "A(p).Key < x" },
+    { "from": "compare", "to": "setR", "label": "x < A(p).Key" },
+    { "from": "compare", "to": "found", "label": "x = A(p).Key" },
+    { "from": "setL", "to": "probe", "label": "" },
+    { "from": "setR", "to": "probe", "label": "" }
+  ]
+}
+```

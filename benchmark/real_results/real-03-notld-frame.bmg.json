@@ -1,0 +1,104 @@
+{
+  "elements": [
+    {
+      "box_2d": [
+        0,
+        390,
+        998,
+        909
+      ],
+      "label": "man",
+      "kind": "other",
+      "text": ""
+    },
+    {
+      "box_2d": [
+        440,
+        336,
+        1000,
+        909
+      ],
+      "label": "man's shirt",
+      "kind": "other",
+      "text": ""
+    },
+    {
+      "box_2d": [
+        0,
+        203,
+        1000,
+        964
+      ],
+      "label": "background structure",
+      "kind": "other",
+      "text": ""
+    },
+    {
+      "box_2d": [
+        0,
+        0,
+        1000,
+        375
+      ],
+      "label": "wall",
+      "kind": "other",
+      "text": ""
+    }
+  ],
+  "latency_ms": 5419,
+  "model": "gemini-2.5-pro",
+  "profile": "general",
+  "prompt_tokens": 599,
+  "structured": {
+    "elements": [
+      {
+        "box_2d": [
+          0,
+          390,
+          998,
+          909
+        ],
+        "kind": "other",
+        "label": "man",
+        "text": ""
+      },
+      {
+        "box_2d": [
+          440,
+          336,
+          1000,
+          909
+        ],
+        "kind": "other",
+        "label": "man's shirt",
+        "text": ""
+      },
+      {
+        "box_2d": [
+          0,
+          203,
+          1000,
+          964
+        ],
+        "kind": "other",
+        "label": "background structure",
+        "text": ""
+      },
+      {
+        "box_2d": [
+          0,
+          0,
+          1000,
+          375
+        ],
+        "kind": "other",
+        "label": "wall",
+        "text": ""
+      }
+    ],
+    "summary": "This is a grainy, black and white medium close-up shot of a man, captured from a slightly low, eye-level angle. The man, who appears to be of African American descent, is positioned on the right side of the frame, turned three-quarters away from the camera and looking down towards the left. A strong, hard key light comes from high and to the right, casting the left side of his face in deep shadow, creating a high-contrast, dramatic look. In the background, a plain wall is visible on the left, and a wooden structure, possibly an easel or a piece of abstract furniture, stands behind him with geometric shapes and varied textures."
+  },
+  "summary": "This is a grainy, black and white medium close-up shot of a man, captured from a slightly low, eye-level angle. The man, who appears to be of African American descent, is positioned on the right side of the frame, turned three-quarters away from the camera and looking down towards the left. A strong, hard key light comes from high and to the right, casting the left side of his face in deep shadow, creating a high-contrast, dramatic look. In the background, a plain wall is visible on the left, and a wooden structure, possibly an easel or a piece of abstract furniture, stands behind him with geometric shapes and varied textures.",
+  "thoughts_tokens": 84,
+  "total_tokens": 1061
+}

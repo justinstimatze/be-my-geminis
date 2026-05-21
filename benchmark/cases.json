@@ -1,0 +1,95 @@
+{
+  "_comment": "9 synthetic cases. generate.py renders the images deterministically. run.sh feeds each (image, question) to raw-Opus-via-API and to bmg-pro-MCP-with-intent via the profile noted on each case. README displays the outputs side-by-side, showing prose vs profile-structured JSON.",
+  "cases": [
+    {
+      "id": "01-bar-chart-quarterly",
+      "category": "chart-value",
+      "profile": "chart",
+      "image": "images/01-bar-chart-quarterly.png",
+      "question": "Read the bar chart and give me the value for each quarter and which quarter is highest. Be specific about the numbers.",
+      "intent": "extract the exact numeric value of each bar, the chart title, and the axis label",
+      "expected_keywords": ["42", "18", "7", "23", "Q1"],
+      "what_it_tests": "Reading specific values off a chart — the canonical 'Opus says \"a chart with bars going down\"' failure mode."
+    },
+    {
+      "id": "02-multi-panel-correlation",
+      "category": "dense-figure",
+      "profile": "general",
+      "image": "images/02-multi-panel-correlation.png",
+      "question": "This figure has four scatter-plot panels labeled A, B, C, D. Which panel shows the strongest linear correlation? Briefly justify.",
+      "intent": "compare correlation strength across the four scatter panels labeled A-D and identify which is most linear",
+      "expected_keywords": ["C"],
+      "what_it_tests": "Comparative analysis across panels — the CharXiv-style dense scientific figure use case."
+    },
+    {
+      "id": "03-directed-graph",
+      "category": "diagram-structure",
+      "profile": "diagram",
+      "image": "images/03-directed-graph.png",
+      "question": "Trace the shortest directed path from the node labeled 'start' to the node labeled 'end'. List the sequence of nodes visited.",
+      "intent": "identify all nodes by their labels, the directed edges connecting them, and the shortest path from start to end",
+      "expected_keywords": ["start", "validate", "approve", "end"],
+      "what_it_tests": "Graph-structure extraction — the diagram-to-mermaid use case."
+    },
+    {
+      "id": "04-synthetic-receipt",
+      "category": "document-data",
+      "profile": "document",
+      "image": "images/04-synthetic-receipt.png",
+      "question": "What is the total amount paid on this receipt, and how many distinct items were ordered?",
+      "intent": "extract the exact final total in dollars and count the line items above the subtotal row",
+      "expected_keywords": ["38.45", "4"],
+      "what_it_tests": "Document data extraction — the receipts/forms/tables use case."
+    },
+    {
+      "id": "05-mock-ui-error",
+      "category": "ui-element",
+      "profile": "screenshot",
+      "image": "images/05-mock-ui-error.png",
+      "question": "There's an error banner on this UI screenshot. What does the error say and what action does it suggest the user take?",
+      "intent": "find the error banner and quote the exact error message text and the suggested user action",
+      "expected_keywords": ["session", "expired", "sign", "in"],
+      "what_it_tests": "UI screenshot triage — the debug-this-error-message use case."
+    },
+    {
+      "id": "06-multi-series-readout",
+      "category": "chart-value",
+      "profile": "chart",
+      "image": "images/06-multi-series-readout.png",
+      "question": "On this multi-series line chart, at timestamp t=42, what is the value of the 'memory_kb' series? Give me the number.",
+      "intent": "identify the line labeled 'memory_kb' in a 6-series line chart and read its y-value precisely at x=42",
+      "expected_keywords": ["86", "85", "87"],
+      "what_it_tests": "Precise per-series readout from a dense multi-line chart with a small legend — the kind of plot where Opus's tendency to summarize fails the question."
+    },
+    {
+      "id": "07-heatmap-colorbar",
+      "category": "dense-figure",
+      "profile": "chart",
+      "image": "images/07-heatmap-colorbar.png",
+      "question": "Find the cell at the intersection of the row labeled exactly 'r5' and the column labeled exactly 'c7' (these are the literal tick-label strings printed on the axes, not 1-based positional indices). Use the viridis colorbar on the right to convert that cell's color to a numeric value.",
+      "intent": "find the single cell at the intersection of the row whose y-axis tick-label reads 'r5' (literal string) and the column whose x-axis tick-label reads 'c7' (literal string); read its color and convert via the viridis colorbar to a numeric value",
+      "expected_keywords": ["0.7", "0.8"],
+      "what_it_tests": "Multi-step visual reasoning: locate-by-label → color → colorbar lookup → numeric value. Charts-with-legends class. Question is worded to defeat the row 5 (0-indexed) vs 5th row (1-indexed) ambiguity that earlier-version 0-indexed-position phrasing surfaced."
+    },
+    {
+      "id": "08-cluster-annotated",
+      "category": "dense-figure",
+      "profile": "general",
+      "image": "images/08-cluster-annotated.png",
+      "question": "There are four labeled clusters in this scatter plot, with arrows annotating each. Which cluster is centered at approximately (3, 5)? Give me its label.",
+      "intent": "identify all four labeled clusters in the scatter plot, their approximate centroid coordinates, and match the cluster whose centroid is closest to (3, 5)",
+      "expected_keywords": ["alpha"],
+      "what_it_tests": "Combining geometric reasoning (centroid position) with text-label binding (which annotation goes with which cluster)."
+    },
+    {
+      "id": "09-complex-flow-json",
+      "category": "diagram-structure",
+      "profile": "diagram",
+      "image": "images/09-complex-flow-json.png",
+      "question": "Return this flowchart as a JSON object with two arrays. nodes: each element has id (the node label as a string) and kind (one of start, decision, process, end). edges: each element has from (source id), to (target id), and label (the edge text, or empty string). Include every node and every edge visible.",
+      "intent": "extract a complete machine-readable representation of the flowchart: every node with its kind classification, every directed edge with its label, with no omissions",
+      "expected_keywords": ["start", "end", "validate", "retry", "approve"],
+      "what_it_tests": "Structured-extraction task where the question explicitly asks for JSON. Tests both completeness (counting every node) and structural correctness (kind classification, edge labels)."
+    }
+  ]
+}
