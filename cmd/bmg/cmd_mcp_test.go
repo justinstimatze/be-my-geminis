@@ -93,6 +93,13 @@ func TestCallDescribe_RelativePath(t *testing.T) {
 }
 
 func TestCallDescribe_NonexistentPath(t *testing.T) {
+	// Force an API key into the resolution chain so callDescribe gets
+	// past the apikey.Resolve early-exit and reaches the file-read
+	// path this test is actually exercising. Without this, the test
+	// passes on a dev workstation that has ~/.config/bmg/api_key and
+	// fails on a clean CI runner that doesn't (api-key error fires
+	// first).
+	t.Setenv("BMG_API_KEY", "test-key-not-actually-used")
 	missing := filepath.Join(t.TempDir(), "does-not-exist.png")
 	args, _ := json.Marshal(map[string]string{"path": missing})
 	text, isErr := callDescribe(args)
