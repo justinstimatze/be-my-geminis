@@ -4,7 +4,7 @@ go 1.26
 
 require (
 	golang.org/x/image v0.40.0
-	google.golang.org/genai v1.55.0
+	google.golang.org/genai v1.57.0
 )
 
 require (
