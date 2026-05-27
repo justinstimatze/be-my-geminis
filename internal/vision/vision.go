@@ -262,7 +262,11 @@ func buildRequest(prof Profile, opts Options, jpgBytes []byte, tb *int32) (*gena
 			". Prioritize information relevant to this task throughout your " +
 			"structured output, especially in the summary. Do not omit " +
 			"standard schema fields, but their ordering and the depth of " +
-			"detail should reflect this priority."
+			"detail should reflect this priority. An explicit task overrides " +
+			"any instinct to decline based on the image's apparent type: if " +
+			"asked to analyze a film still as a UI, extract a palette from a " +
+			"photo, or treat any image as the requested subject, do so rather " +
+			"than refusing because the image isn't a conventional example."
 		if systemText != "" {
 			systemText += "\n\n" + intentText
 		} else {

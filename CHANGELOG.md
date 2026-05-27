@@ -6,7 +6,30 @@ follows [SemVer](https://semver.org/) once 0.1.0 is tagged.
 
 ## [Unreleased]
 
-_Nothing yet — see [0.2.0] below for the most recent release._
+### Added
+- **Per-Read `#raw` escape hatch.** Append `#raw` to a Read path
+  (`Read "frame.png#raw"`) to get raw pixels for that single Read
+  instead of a vision report. The hook strips the sentinel and
+  rewrites the Read to the real path. First mid-session bypass —
+  `BMG_DISABLE` remains whole-session/launch-time. For perceptual
+  tasks a description loses (design study, palette sampling, dense
+  small-text UI, montages, pixel diffing). Surfaced in the
+  SessionStart routing prime so agents discover it.
+
+### Changed
+- **Explicit intent overrides profile gating.** When an `intent` is
+  passed, the system instruction now tells Gemini to honor the
+  requested extraction even when the image isn't a conventional
+  example of the profile (e.g. analyzing a film still as a UI for
+  design study) rather than declining.
+- **General profile flags montages.** Contact-sheet / grid inputs are
+  now called out in the summary with a pointer to per-frame Reads or
+  `#raw`, instead of silently returning a per-tile enumeration.
+
+_These address downstream friction reported in
+`docs/feedback/2026-05-27-raw-visual-vs-vision-report.md`._
+
+## [0.2.0] - 2026-05-21
 
 ## [0.2.0] - 2026-05-21
 

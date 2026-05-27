@@ -13,7 +13,12 @@ const generalPrompt = `Describe this image as JSON matching the provided schema.
     label: short identifier (e.g. 'sign_in_button').
     kind: ui_button | text | input_field | image | icon | container | other.
     text: verbatim OCR of any text in the element, empty string if none.
-Be exhaustive on elements; do not skip text labels, fields, or icons.`
+Be exhaustive on elements; do not skip text labels, fields, or icons.
+- If the image is a montage, contact sheet, or grid of multiple distinct
+  frames/thumbnails, say so explicitly in the first sentence of the summary
+  and note that per-frame detail is necessarily limited at this scale. The
+  caller should Read individual frames, or append "#raw" to the path to get
+  the raw pixels, when per-frame fidelity matters.`
 
 // generalSchema is the responseSchema enforced by Gemini's structured-output
 // API for the default profile. Verified to compile and round-trip cleanly

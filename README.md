@@ -224,9 +224,15 @@ firings before the cap kicks in).
 
 ### Kill switches
 
+- **Per-Read raw pixels:** append `#raw` to the path you Read
+  (`Read "frame.png#raw"`). bmg strips the sentinel and returns the
+  raw bytes instead of a vision report — a single-Read escape hatch
+  for perceptual tasks where a description is lossy (design study,
+  palette sampling, dense small-text UI, montages, pixel diffing).
+  No relaunch needed; the agent just changes the path it reads.
 - **Whole-session bypass:** `BMG_DISABLE=1` in the environment
   *before launching* `claude`. The hook returns immediately on
-  every Read. There is no per-Read mid-session toggle.
+  every Read.
 - **Permanent removal:** `bmg uninstall` strips hook + MCP
   registration. Pair with `bmg cache clean` to wipe local copies.
 
@@ -519,8 +525,10 @@ extra config — useful behind corporate egress proxies.
 ## Known limitations
 
 - **Per-pixel chart values + sub-100px spatial targets.** Cases 06
-  and 07 of the benchmark; use Opus directly. Not pipeline-fixable
-  without a different underlying multimodal model.
+  and 07 of the benchmark. For these (and any perceptual task where a
+  textual report is lossy) append `#raw` to the Read path to get raw
+  pixels in-session, or use Opus directly. Not pipeline-fixable in the
+  report path without a different underlying multimodal model.
 - **Windows is unsupported.** The hook command shape needs a
   Windows-aware design pass. PRs welcome; not a roadmap item.
 - **PDFs.** Opus 4.6+ leads on DocVQA, so wrapping PDFs in bmg

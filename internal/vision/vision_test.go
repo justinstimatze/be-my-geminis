@@ -63,6 +63,12 @@ func TestBuildRequest_OnlyIntent(t *testing.T) {
 	if strings.Contains(got, "\n\n") {
 		t.Errorf("system text %q should not have leading composition separator when only intent is present", got)
 	}
+	// An explicit intent must carry the gating-override clause so a
+	// profile (e.g. screenshot) doesn't decline a film still when the
+	// task is "study this UI". See docs/feedback friction #2.
+	if !strings.Contains(got, "overrides") {
+		t.Errorf("intent text %q should tell the model an explicit task overrides type-based refusal", got)
+	}
 }
 
 func TestBuildRequest_BothComposed(t *testing.T) {

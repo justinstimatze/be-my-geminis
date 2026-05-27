@@ -34,6 +34,16 @@ func sanitizeFenceTokens(s string) string {
 	return fenceCloseTokenRe.ReplaceAllString(s, "</_bmg-")
 }
 
+// rawSentinel is the per-Read escape hatch. An agent that wants raw
+// pixels for a single Read — instead of a vision report — appends this
+// suffix to the path it Reads (e.g. "frame.png#raw"). The hook strips
+// it and rewrites the Read to the real path, so Claude Code returns the
+// bytes. This is the only mid-session bypass; BMG_DISABLE is whole-
+// session and launch-time. Use it for perceptual tasks where a textual
+// description is lossy: visual design study, palette/color sampling,
+// dense or small-text UI, montages/contact-sheets, pixel-level diffing.
+const rawSentinel = "#raw"
+
 // imageExtensions are the file extensions that trigger bmg's redirect.
 // Anything else passes through untouched. JPEG/PNG/GIF/BMP are decoded
 // natively by Go's image package; WEBP/TIFF require golang.org/x/image
@@ -67,10 +77,12 @@ func init() {
 //  1. BMG_DISABLE=1                      → passthrough (exit 0)
 //  2. BMG_HOOK_PROXY=1                   → recursion guard, passthrough
 //  3. tool_input.file_path missing       → passthrough (not our concern)
-//  4. extension not in imageExtensions   → passthrough
-//  5. path is one of bmg's own outputs   → re-entry guard, passthrough
-//  6. cache hit                          → emit redirect to cached report
-//  7. cache miss:
+//  4. "#raw" sentinel on the path        → strip + rewrite to real path
+//     (raw pixels, no vision report)
+//  5. extension not in imageExtensions   → passthrough
+//  6. path is one of bmg's own outputs   → re-entry guard, passthrough
+//  7. cache hit                          → emit redirect to cached report
+//  8. cache miss:
 //     resolve API key                  → fail-open (passthrough) if missing
 //     read + describe via vision       → on error, deny with reason
 //     cache.Put + emit redirect
@@ -104,6 +116,21 @@ func cmdPreRead() {
 		hook.Logf(name, "tool_input.file_path empty → passthrough")
 		return
 	}
+
+	// Per-Read raw bypass. Must run before the extension gate:
+	// filepath.Ext("frame.png#raw") is ".png#raw", which isn't an image
+	// ext, so the gate would passthrough the literal sentinel path and
+	// Claude Code's Read would fail to open a nonexistent file. Instead
+	// we strip the sentinel and rewrite the Read to the real path so the
+	// agent gets raw pixels. See rawSentinel's docstring.
+	if realPath, ok := strings.CutSuffix(ti.FilePath, rawSentinel); ok {
+		hook.Logf(name, "#raw sentinel → raw passthrough for %s", realPath)
+		if err := hook.EmitRedirect(realPath); err != nil {
+			hook.Logf(name, "emit raw redirect: %s", err)
+		}
+		return
+	}
+
 	ext := strings.ToLower(filepath.Ext(ti.FilePath))
 	if !imageExtensions[ext] {
 		hook.Logf(name, "ext=%s not image → passthrough", ext)

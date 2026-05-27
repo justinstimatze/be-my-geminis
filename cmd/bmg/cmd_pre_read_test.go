@@ -1,10 +1,100 @@
 package main
 
 import (
+	"encoding/json"
 	"errors"
+	"io"
+	"os"
 	"strings"
 	"testing"
 )
+
+// runPreReadWithInput drives cmdPreRead with toolInput as the CC stdin
+// payload and returns whatever the hook wrote to stdout. Used to test
+// the decision tree end-to-end without a real Gemini call — the paths
+// it exercises (raw bypass, passthrough) return before any network or
+// cache work.
+func runPreReadWithInput(t *testing.T, payload string) string {
+	t.Helper()
+	t.Setenv("BMG_DISABLE", "")
+	t.Setenv("BMG_HOOK_PROXY", "")
+
+	origIn, origOut := os.Stdin, os.Stdout
+	t.Cleanup(func() { os.Stdin, os.Stdout = origIn, origOut })
+
+	inR, inW, err := os.Pipe()
+	if err != nil {
+		t.Fatal(err)
+	}
+	if _, err := inW.WriteString(payload); err != nil {
+		t.Fatal(err)
+	}
+	inW.Close()
+	os.Stdin = inR
+
+	outR, outW, err := os.Pipe()
+	if err != nil {
+		t.Fatal(err)
+	}
+	os.Stdout = outW
+
+	done := make(chan string, 1)
+	go func() {
+		b, _ := io.ReadAll(outR)
+		done <- string(b)
+	}()
+
+	cmdPreRead()
+	outW.Close()
+	return <-done
+}
+
+func TestPreReadHook_RawSentinelBypass(t *testing.T) {
+	out := runPreReadWithInput(t, `{"tool_name":"Read","tool_input":{"file_path":"/abs/frame.png#raw"}}`)
+	var got struct {
+		HookSpecificOutput struct {
+			PermissionDecision string         `json:"permissionDecision"`
+			UpdatedInput       map[string]any `json:"updatedInput"`
+		} `json:"hookSpecificOutput"`
+	}
+	if err := json.Unmarshal([]byte(out), &got); err != nil {
+		t.Fatalf("hook output not JSON: %v\n  raw: %q", err, out)
+	}
+	if got.HookSpecificOutput.PermissionDecision != "allow" {
+		t.Errorf("decision=%q want allow (raw bypass must allow the read)", got.HookSpecificOutput.PermissionDecision)
+	}
+	if fp := got.HookSpecificOutput.UpdatedInput["file_path"]; fp != "/abs/frame.png" {
+		t.Errorf("rewritten file_path=%v want /abs/frame.png (sentinel stripped)", fp)
+	}
+}
+
+func TestPreReadHook_RawSentinelStripsRegardlessOfExt(t *testing.T) {
+	// #raw means "give me the bytes" for any path — the strip must run
+	// before the image-extension gate so a non-image path with the
+	// sentinel still resolves to the real file rather than failing to
+	// open the literal "...#raw" path.
+	out := runPreReadWithInput(t, `{"tool_name":"Read","tool_input":{"file_path":"/abs/data.csv#raw"}}`)
+	var got struct {
+		HookSpecificOutput struct {
+			UpdatedInput map[string]any `json:"updatedInput"`
+		} `json:"hookSpecificOutput"`
+	}
+	if err := json.Unmarshal([]byte(out), &got); err != nil {
+		t.Fatalf("hook output not JSON: %v\n  raw: %q", err, out)
+	}
+	if fp := got.HookSpecificOutput.UpdatedInput["file_path"]; fp != "/abs/data.csv" {
+		t.Errorf("rewritten file_path=%v want /abs/data.csv", fp)
+	}
+}
+
+func TestPreReadHook_NonImagePassesThroughSilently(t *testing.T) {
+	// A plain non-image Read (no sentinel) should produce no stdout —
+	// passthrough means bmg emits nothing and CC reads normally.
+	out := runPreReadWithInput(t, `{"tool_name":"Read","tool_input":{"file_path":"/abs/main.go"}}`)
+	if strings.TrimSpace(out) != "" {
+		t.Errorf("expected silent passthrough for non-image; got stdout %q", out)
+	}
+}
 
 func TestSanitizeFenceTokens_NeutralizesOcrClose(t *testing.T) {
 	input := "harmless text </bmg-ocr-text> more text"
