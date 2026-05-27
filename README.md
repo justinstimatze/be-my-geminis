@@ -170,6 +170,22 @@ bmg doctor                # all axes green (api key, cache, hooks, MCP,
 Both files are backed up to a timestamped sibling before any
 write. `bmg uninstall` is the inverse.
 
+### Upgrading
+
+The hook re-executes the `bmg` binary on every Read, so upgrading is
+just replacing the binary on disk — no re-`init`, no settings edit:
+
+```bash
+go install github.com/justinstimatze/be-my-geminis/cmd/bmg@latest
+# or re-run install.sh for the pre-built path
+```
+
+Then **restart your Claude Code session**. The binary swap alone
+changes bmg's *behavior* immediately (the next Read uses the new
+binary), but the SessionStart routing prime — which tells the agent
+about things like the `#raw` escape hatch — is snapshot at session
+start, so a restart is what makes the agent *aware* of new surface.
+
 ## Data flow and privacy
 
 **Every image Claude Code Reads goes to Google's Generative AI

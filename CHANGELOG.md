@@ -6,6 +6,10 @@ follows [SemVer](https://semver.org/) once 0.1.0 is tagged.
 
 ## [Unreleased]
 
+_Nothing yet — see [0.3.0] below for the most recent release._
+
+## [0.3.0] - 2026-05-27
+
 ### Added
 - **Per-Read `#raw` escape hatch.** Append `#raw` to a Read path
   (`Read "frame.png#raw"`) to get raw pixels for that single Read
@@ -26,7 +30,12 @@ follows [SemVer](https://semver.org/) once 0.1.0 is tagged.
   now called out in the summary with a pointer to per-frame Reads or
   `#raw`, instead of silently returning a per-tile enumeration.
 
-_These address downstream friction reported in
+- **Dependencies.** Bumped `google.golang.org/genai` 1.55.0 → 1.57.0,
+  `golang.org/x/image` 0.39.0 → 0.40.0, and the GitHub Actions
+  (`checkout` 4→6, `setup-go` 5→6, `goreleaser-action` 6→7) via
+  dependabot.
+
+_The vision-surface changes address downstream friction reported in
 `docs/feedback/2026-05-27-raw-visual-vs-vision-report.md`._
 
 ## [0.2.0] - 2026-05-21
@@ -231,4 +240,6 @@ The pre-versioning commits, in reverse chronological order:
 - `f52c1a7` — Initial commit: hook-routed Gemini vision + MCP server
   with 6 profiles
 
-[Unreleased]: https://github.com/justinstimatze/be-my-geminis/compare/main
+[Unreleased]: https://github.com/justinstimatze/be-my-geminis/compare/v0.3.0...main
+[0.3.0]: https://github.com/justinstimatze/be-my-geminis/compare/v0.2.0...v0.3.0
+[0.2.0]: https://github.com/justinstimatze/be-my-geminis/releases/tag/v0.2.0

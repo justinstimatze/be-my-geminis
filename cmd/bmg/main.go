@@ -38,7 +38,7 @@ import (
 //	go build -ldflags="-X main.version=v$(git describe --tags)" ./cmd/bmg
 //
 // goreleaser will do this automatically once we wire it up.
-var version = "0.2.0-dev"
+var version = "0.3.0"
 
 func main() {
 	if len(os.Args) < 2 {
