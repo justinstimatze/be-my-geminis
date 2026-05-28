@@ -3,7 +3,7 @@ module github.com/justinstimatze/be-my-geminis
 go 1.26
 
 require (
-	golang.org/x/image v0.40.0
+	golang.org/x/image v0.41.0
 	google.golang.org/genai v1.57.0
 )
 
